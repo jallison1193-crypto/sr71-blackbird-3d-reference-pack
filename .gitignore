@@ -1,0 +1,7 @@
+scrape_*.py
+fetch_*.py
+verify_*.py
+api_scrape_*.json
+scraped_*.json
+final_supplement.json
+verified_extra.json

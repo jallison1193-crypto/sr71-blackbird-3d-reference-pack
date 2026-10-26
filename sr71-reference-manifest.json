@@ -1,0 +1,187 @@
+{
+  "pack_name": "Lockheed SR-71A Blackbird 3D & Exploded-View Master Reference Pack",
+  "version": "1.0.0",
+  "target_pipeline": ["Claude", "Astra / Astro", "Opus 5.5", "Blender MCP"],
+  "blender_scene_spec": {
+    "units": "METRIC",
+    "scale_length": 1.0,
+    "dimensions_meters": {
+      "length_airframe_excl_pitot": 32.741,
+      "wingspan_physical": 16.942,
+      "wingspan_nasa_reference": 17.282,
+      "mean_aerodynamic_chord": 11.491,
+      "height_overall": 5.639,
+      "wheelbase": 11.532,
+      "wheel_track": 5.08,
+      "nacelle_centerline_offset_x": 4.115,
+      "nacelle_outer_diameter_approx": 1.676,
+      "j58_engine_length": 4.572,
+      "j58_engine_max_diameter": 1.27,
+      "inlet_spike_axial_travel": 0.66
+    },
+    "angles_degrees": {
+      "outer_wing_leading_edge_sweep": 60.0,
+      "twin_rudder_inward_cant": 15.0,
+      "outboard_elevon_te_up_rigging": 3.0,
+      "nacelle_inward_toe_in_approx": 1.5,
+      "nacelle_nose_down_droop_approx": 2.5
+    },
+    "fuselage_stations_inches": {
+      "nose_tip_datum": 200.0,
+      "detachable_nose_bulkhead": 295.0,
+      "pilot_cockpit_range": [375.0, 465.0],
+      "rso_cockpit_range": [465.0, 545.0],
+      "ans_star_tracker_bay": [545.0, 605.0],
+      "flight_test_gyro_package": {"fs": 683.0, "bl": 32.5, "wl": 86.2},
+      "primary_wing_fuselage_joint": 715.0,
+      "forward_dorsal_thermal_station": 942.0,
+      "dorsal_payload_cg_reference": 1038.0,
+      "aft_tail_between_rudders": 1135.0,
+      "tailcone_termination": 1489.0
+    }
+  },
+  "orthographic_and_engineering_docs": [
+    {
+      "title": "Lockheed SR-71A Orthographic 3-View Vector",
+      "type": "image/svg+xml",
+      "license": "Public Domain",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Lockheed_SR-71A_3view.svg"
+    },
+    {
+      "title": "NASA/TP-2000-209023: The SR-71 Test Bed Aircraft (3-Views & Stations)",
+      "type": "application/pdf",
+      "url": "https://ntrs.nasa.gov/api/citations/20000064011/downloads/20000064011.pdf"
+    },
+    {
+      "title": "NASA/TP-2002-210718: Stability and Control Estimation (Geometry & Control Surfaces)",
+      "type": "application/pdf",
+      "url": "https://ntrs.nasa.gov/api/citations/20020057965/downloads/20020057965.pdf"
+    },
+    {
+      "title": "NASA/TM-1998-206567: LASRE Flight Stability & Geometry Reference",
+      "type": "application/pdf",
+      "url": "https://ntrs.nasa.gov/api/citations/19980231067/downloads/19980231067.pdf"
+    },
+    {
+      "title": "AIAA 2009-1522: Design and Development of the Blackbird (Titanium & Composite Structure)",
+      "type": "application/pdf",
+      "url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf"
+    },
+    {
+      "title": "NASA-TM-X-3099: YF-12C (SR-71A) Airplane & J58 Propulsion System Stations",
+      "type": "application/pdf",
+      "url": "https://ntrs.nasa.gov/api/citations/19740024172/downloads/19740024172.pdf"
+    },
+    {
+      "title": "Declassified USAF T.O. 1SR-71A-1 Flight Manual Part 1 (Systems, Cockpits, Fuel & J58 Cutaways)",
+      "type": "application/pdf",
+      "url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_text.pdf"
+    },
+    {
+      "title": "Declassified USAF T.O. 1SR-71A-1 Flight Manual Part 3 (ANS Star-Tracker & Auxiliary Systems)",
+      "type": "application/pdf",
+      "url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__03_text.pdf"
+    }
+  ],
+  "3d_scans_and_meshes": [
+    {
+      "title": "SR-71A Blackbird 61-7962, IWM Duxford",
+      "downloadable": true,
+      "license": "CC0 1.0 Public Domain",
+      "faces": 186323,
+      "url": "https://sketchfab.com/3d-models/sr-71a-blackbird-61-7962-duxford-00c24dd3549a4f429dd1a0a2469e9ba4"
+    },
+    {
+      "title": "GRADD Pratt & Whitney J58 Photogrammetry Scan (199 Photos, Museum of Flight Seattle)",
+      "downloadable": false,
+      "license": "Editorial Inspectable Scan",
+      "faces": 2499747,
+      "url": "https://sketchfab.com/3d-models/gradd-sr-71-blackbird-a12-j58-engine-3d-model-9fe852b2c84b442bb112aec9c8c8b29e"
+    },
+    {
+      "title": "Polycam LiDAR / Photogrammetry Capture (San Diego Blackbird)",
+      "downloadable": true,
+      "license": "Polycam Public",
+      "url": "https://poly.cam/capture/02BE69A5-AED5-43CF-8536-8B8435C541CF"
+    },
+    {
+      "title": "FGMEMBERS/Lockheed-SR71 Articulated AC3D + 13 Cockpit Instruments Repository",
+      "downloadable": true,
+      "license": "GPL-2.0",
+      "url": "https://github.com/FGMEMBERS/Lockheed-SR71"
+    },
+    {
+      "title": "Pratt & Whitney J58 Jet Engine High-Poly Mesh",
+      "downloadable": true,
+      "license": "CC BY-NC-SA",
+      "faces": 262638,
+      "url": "https://sketchfab.com/3d-models/j58-jet-engine-bca3015516304cfabe249cfad5363939"
+    },
+    {
+      "title": "Skeletal Blackbird (SR-71) Internal Rib/Spar Visualization",
+      "downloadable": false,
+      "faces": 5303966,
+      "url": "https://sketchfab.com/3d-models/skeletal-blackbirdsr-71-skeleton-ac3ed6faf9094ead90dabe22aceba2b7"
+    }
+  ],
+  "cockpit_360_tours": {
+    "pilot_front_cockpit_360": "http://www.nmusafvirtualtour.com/media/068/SR-71A%20Front%20Cockpit.html",
+    "rso_rear_cockpit_360": "http://www.nmusafvirtualtour.com/media/068/SR-71A%20Rear%20Cockpit.html"
+  },
+  "cutaway_and_inner_workings_diagrams": [
+    "https://upload.wikimedia.org/wikipedia/commons/8/89/SR71_J58_Engine_Airflow_Patterns.svg",
+    "https://upload.wikimedia.org/wikipedia/commons/1/1b/J58_airflow_at_Mach_3.png",
+    "https://upload.wikimedia.org/wikipedia/commons/0/02/SR71J58.png",
+    "https://upload.wikimedia.org/wikipedia/commons/8/85/Sr-71-composit.gif",
+    "http://web.archive.org/web/20260208145315/http://www.wvi.com/%7Esr71webmaster/schematic.html"
+  ],
+  "high_res_photo_sets": {
+    "head_on_and_nose": [
+      "https://upload.wikimedia.org/wikipedia/commons/1/1c/This_photo_shows_a_head-on_view_of_NASA%27s_SR-71B_on_the_ramp_at_the_Air_Force%27s_Plant_42_in_Palmdale%2C_California%2C_shortly_before_delivery_to_DFRC_%28EC91-0365-7%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/21/NASM_-_SR-71_Blackbird_2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/a/ac/SR-71_PCAM_nose_1.JPG",
+      "https://media.defense.gov/2020/May/14/2002299669/-1/-1/0/200513-F-IO108-005.JPG"
+    ],
+    "dorsal_planform": [
+      "https://upload.wikimedia.org/wikipedia/commons/5/55/Linear_Aerospike_SR-71_Experiment_%28LASRE%29_first_flight_view_from_above_%28EC97-44295-84%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/8/8c/Linear_Aerospike_SR-71_Experiment_%28LASRE%29_first_flight_view_from_above_%28EC97-44295-51%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/97/Lockheed_SR-71_Blackbird.jpg"
+    ],
+    "side_underside_and_landing_gear": [
+      "https://upload.wikimedia.org/wikipedia/commons/4/4a/SR-71_Landing_with_Drag_Chute_-_GPN-2000-001944.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/54/Lockheed_SR-71A_61-7971%2C_Edwards_AFB%2C_CA_Oct96_%2852302789562%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/bc/Lockheed_SR-71_left_engine_spike_%286586704831%29_%285%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/b5/Lockheed_SR-71_Blackbird_-_Landing_Gear_%284889948402%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/1f/Tires_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01031.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/ea/SR-71_Landing_Gear_and_Entry_Door_%2849071408071%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/24/SR-71_engine_and_landing_gear_%2849007575312%29.jpg"
+    ],
+    "rear_and_exhaust_nozzles": [
+      "https://upload.wikimedia.org/wikipedia/commons/2/2a/Lockheed_SR-71_jet_exhaust_detail%2C_National_Museum_of_the_US_Air_Force%2C_Dayton%2C_Ohio%2C_USA._%2831485223097%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/b/bc/Blackbird_SR-71_engine_nozzle.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/62/SR-71_Takeoff_with_Afterburner_Showing_Shock_Diamonds_in_Exhaust.jpg"
+    ],
+    "pilot_cockpit": [
+      "https://media.defense.gov/2007/Jan/16/2000521412/-1/-1/0/070116-F-1234S-013.JPG",
+      "https://media.defense.gov/2010/May/10/2000521423/-1/-1/0/070116-F-1234S-010.JPG",
+      "https://media.defense.gov/2007/Jan/16/2000521421/-1/-1/0/070116-F-1234S-011.JPG",
+      "https://media.defense.gov/2007/Jan/16/2000521414/-1/-1/0/070116-F-1234S-012.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/2/25/SR-71_Pilots_cockpit%2C_instruments%2C_stick%2C_ejection_seat_%284527966172%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/2/2e/Frontiers_of_Flight_Museum_December_2015_130_%28Link_SR-71_simulator%29.jpg"
+    ],
+    "rso_cockpit": [
+      "https://media.defense.gov/2020/Feb/25/2002254473/-1/-1/0/200225-F-IO108-001.JPG",
+      "https://media.defense.gov/2020/Feb/25/2002254558/-1/-1/0/200225-F-IO108-017.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/b/bb/SR-71_Systems_operators_cockpit%2C_controls%2C_instruments%2C_ejection_seat_%284527964406%29.jpg"
+    ],
+    "j58_engine_and_internal_hardware": [
+      "https://upload.wikimedia.org/wikipedia/commons/3/38/At_the_Intrepid_Museum_2023_122.jpg",
+      "https://media.defense.gov/2020/May/14/2002300185/-1/-1/0/200513-F-IO108-045.JPG",
+      "https://media.defense.gov/2020/May/14/2002300187/-1/-1/0/200513-F-IO108-047.JPG",
+      "https://upload.wikimedia.org/wikipedia/commons/c/cd/18-15-112-J58.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/6d/SR-71_Engine_%2817473380699%29.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/c/c8/Technical_Objective_Camera_%28TEOC%29%2C_No._36%2C_Hycon_Corporation_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01063.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/1/1c/SR-71_61-7953_debris_1.jpg"
+    ]
+  }
+}
