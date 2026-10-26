@@ -5,3 +5,5 @@ api_scrape_*.json
 scraped_*.json
 final_supplement.json
 verified_extra.json
+
+build_*.py

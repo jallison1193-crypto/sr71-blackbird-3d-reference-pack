@@ -3,440 +3,513 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lockheed SR-71A Blackbird — 3D & Exploded-View Master Reference Pack</title>
+  <title>Lockheed SR-71A Blackbird — Complete 3D &amp; Exploded-View Reference Pack</title>
   <style>
     :root {
-      --bg: #0b0e14;
-      --panel: #131822;
-      --border: #252f42;
-      --accent: #ff4d2e;
-      --accent2: #58a6ff;
-      --text: #e6edf3;
-      --muted: #8b949e;
-      --code: #1c2433;
+      --bg: #0b0e14; --panel: #131822; --panel2: #192130; --border: #263145;
+      --accent: #ff5638; --accent2: #58a6ff; --text: #e6edf3; --muted: #939fac; --code: #1d2636;
     }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(180deg, #161d2b 0%, #0b0e14 100%);
-      border-bottom: 1px solid var(--border);
-      padding: 2.5rem 1.5rem 2rem;
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(255, 77, 46, 0.15);
-      color: #ff6f56;
-      border: 1px solid rgba(255, 77, 46, 0.4);
-      padding: 0.25rem 0.65rem;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-    h1 { margin: 0.6rem 0 0.5rem; font-size: 2.1rem; }
-    h2 {
-      margin-top: 2.5rem;
-      padding-bottom: 0.4rem;
-      border-bottom: 1px solid var(--border);
-      color: #fff;
-    }
-    h3 { color: var(--accent2); margin-top: 1.5rem; }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1.25rem;
-    }
-    nav a {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      color: var(--text);
-      text-decoration: none;
-      padding: 0.45rem 0.85rem;
-      border-radius: 6px;
-      font-size: 0.88rem;
-    }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.62; }
+    header { background: linear-gradient(180deg, #161e2e 0%, #0b0e14 100%); border-bottom: 1px solid var(--border); padding: 2.2rem 1.5rem 1.6rem; position: sticky; top: 0; z-index: 20; }
+    .wrap { max-width: 1320px; margin: 0 auto; }
+    .badge { display: inline-block; background: rgba(255,86,56,0.16); color: #ff775e; border: 1px solid rgba(255,86,56,0.45); padding: 0.2rem 0.65rem; border-radius: 999px; font-size: 0.76rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    h1 { margin: 0.45rem 0 0.35rem; font-size: 1.85rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.9rem; }
+    nav a { background: var(--panel); border: 1px solid var(--border); color: var(--text); text-decoration: none; padding: 0.38rem 0.75rem; border-radius: 6px; font-size: 0.84rem; font-weight: 500; }
     nav a:hover { border-color: var(--accent2); color: var(--accent2); }
-    main { max-width: 1280px; margin: 0 auto; padding: 1rem 1.5rem 4rem; }
-    .callout {
-      background: var(--panel);
-      border-left: 4px solid var(--accent);
-      padding: 1rem 1.25rem;
-      border-radius: 0 8px 8px 0;
-      margin: 1.25rem 0;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0 1.5rem;
-      font-size: 0.92rem;
-      background: var(--panel);
-      border: 1px solid var(--border);
-    }
-    th, td {
-      padding: 0.65rem 0.85rem;
-      border-bottom: 1px solid var(--border);
-      text-align: left;
-      vertical-align: top;
-    }
-    th { background: #192130; color: #fff; }
+    nav a.json-btn { border-color: rgba(255,86,56,0.5); color: #ff856f; }
+    main { max-width: 1320px; margin: 0 auto; padding: 1.5rem 1.5rem 5rem; }
+    .pack-section { background: #0f141d; border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+    .sec-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.65rem; margin-bottom: 1.1rem; }
+    .sec-header h2 { margin: 0; font-size: 1.45rem; color: #fff; }
+    .raw-pill { font-size: 0.8rem; background: var(--panel2); border: 1px solid var(--border); padding: 0.25rem 0.65rem; border-radius: 999px; text-decoration: none; color: var(--accent2); }
+    h3 { color: var(--accent2); margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.15rem; }
+    h4 { color: #ffd166; margin-top: 1.2rem; margin-bottom: 0.35rem; font-size: 1.0rem; }
+    .callout { background: var(--panel); border-left: 4px solid var(--accent); padding: 0.85rem 1.1rem; border-radius: 0 8px 8px 0; margin: 1rem 0; font-size: 0.93rem; }
+    table { width: 100%; border-collapse: collapse; margin: 0.9rem 0 1.4rem; font-size: 0.89rem; background: var(--panel); border: 1px solid var(--border); }
+    th, td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--panel2); color: #fff; }
     a { color: var(--accent2); word-break: break-word; }
-    code {
-      background: var(--code);
-      padding: 0.15rem 0.4rem;
-      border-radius: 4px;
-      font-size: 0.88em;
-    }
-    pre {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      padding: 1rem;
-      border-radius: 8px;
-      overflow-x: auto;
-      font-size: 0.86rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-      gap: 1rem;
-      margin: 1rem 0;
-    }
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-    .card img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-    }
-    .card-body { padding: 0.85rem 1rem; font-size: 0.88rem; }
-    .card-body strong { display: block; color: #fff; margin-bottom: 0.3rem; }
-    .meta { color: var(--muted); font-size: 0.8rem; margin-bottom: 0.4rem; }
+    code { background: var(--code); padding: 0.12rem 0.38rem; border-radius: 4px; font-size: 0.87em; }
+    pre { background: var(--panel); border: 1px solid var(--border); padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.84rem; }
+    pre code { background: transparent; padding: 0; }
+    hr { border: 0; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(295px, 1fr)); gap: 0.95rem; margin: 1rem 0 1.75rem; }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .card img { width: 100%; height: 195px; object-fit: cover; background: #fff; border-bottom: 1px solid var(--border); }
+    .card-body { padding: 0.75rem 0.95rem; font-size: 0.85rem; }
+    .card-body strong { display: block; color: #fff; margin-bottom: 0.25rem; }
   </style>
 </head>
 <body>
   <header>
-    <span class="badge">Blender MCP · Claude · Astra / Astro · Opus 5.5</span>
-    <h1>Lockheed SR-71A Blackbird — 3D &amp; Exploded-View Master Reference Pack</h1>
-    <p style="color: var(--muted); margin: 0.25rem 0 0;">
-      Authoritative multi-angle photography, orthographic 3-views, fuselage station coordinates (<code>FS/BL/WL</code>), museum 3D photogrammetry scans, Pilot &amp; RSO 360° cockpits, Pratt &amp; Whitney J58 bleed-bypass cutaways, and interactive examination snippets.
-    </p>
-    <nav>
-      <a href="#machine-links">00. Raw Markdown &amp; JSON</a>
-      <a href="#geometry">01. Geometry &amp; Stations</a>
-      <a href="#scans">02. 3D Scans &amp; Meshes</a>
-      <a href="#photos">03. Multi-Angle Photos</a>
-      <a href="#cockpits">04. Pilot &amp; RSO Cockpits</a>
-      <a href="#inner-workings">05. Inner Workings &amp; J58 Cutaways</a>
-      <a href="#callouts">06. Interactive Callout Snippets</a>
-    </nav>
+    <div class="wrap">
+      <span class="badge">All-In-One Master Pack · Claude · Astra / Astro · Opus 5.5 · Blender MCP</span>
+      <h1>Lockheed SR-71A Blackbird — 3D &amp; Exploded-View Master Reference Pack</h1>
+      <nav>
+        <a href="#visual-overview">Visual Gallery</a>
+        <a href="#01-geometry">01. Geometry &amp; Stations</a>
+        <a href="#02-scans">02. 3D Scans &amp; Meshes</a>
+        <a href="#03-photos">03. Multi-Angle Photos</a>
+        <a href="#04-cockpits">04. Cockpits &amp; 360° Tours</a>
+        <a href="#05-inner-workings">05. Inner Workings &amp; Rig</a>
+        <a href="#06-callouts">06. Examination Callouts</a>
+        <a class="json-btn" href="./sr71-reference-manifest.json" target="_blank">JSON Manifest</a>
+        <a class="json-btn" href="./CLAUDE_SINGLE_FILE_PACKET.md" target="_blank">Single-File Markdown</a>
+        <a class="json-btn" href="https://github.com/jallison1193-crypto/sr71-blackbird-3d-reference-pack" target="_blank">GitHub Repo</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section id="machine-links">
-      <h2>00. Direct Machine-Readable Pack Files (For Claude / LLM Fetch)</h2>
-      <div class="callout">
-        <strong>Tip for Claude:</strong> Every section on this page is also available as clean standalone Markdown or structured JSON in the public GitHub repository:
-        <a href="https://github.com/jallison1193-crypto/sr71-blackbird-3d-reference-pack">github.com/jallison1193-crypto/sr71-blackbird-3d-reference-pack</a>
+    <section id="visual-overview" class="pack-section">
+      <div class="sec-header">
+        <h2>00. Quick Visual Reference Sheet (Blueprints, Angles, Cockpits &amp; J58 Cutaways)</h2>
+        <span style="color:var(--muted);font-size:0.85rem;">All 6 complete reference sections follow directly below on this single page</span>
       </div>
-      <ul>
-        <li><strong>Structured JSON Manifest:</strong> <a href="./sr71-reference-manifest.json"><code>sr71-reference-manifest.json</code></a></li>
-        <li><strong>Master Index Markdown:</strong> <a href="./README.md"><code>README.md</code></a></li>
-        <li><strong>Section 01 (Geometry, 3-Views &amp; Fuselage Stations):</strong> <a href="./01-geometry-blueprints-stations.md"><code>01-geometry-blueprints-stations.md</code></a></li>
-        <li><strong>Section 02 (3D Scans, Photogrammetry &amp; Open Meshes):</strong> <a href="./02-3d-scans-and-meshes.md"><code>02-3d-scans-and-meshes.md</code></a></li>
-        <li><strong>Section 03 (Exterior Multi-Angle Photos):</strong> <a href="./03-exterior-multi-angle-photos.md"><code>03-exterior-multi-angle-photos.md</code></a></li>
-        <li><strong>Section 04 (Pilot &amp; RSO Cockpits + Flight Manual):</strong> <a href="./04-cockpit-pilot-and-rso.md"><code>04-cockpit-pilot-and-rso.md</code></a></li>
-        <li><strong>Section 05 (Inner Workings, J58 Cutaways &amp; Exploded Rig):</strong> <a href="./05-inner-workings-cutaways-exploded-rig.md"><code>05-inner-workings-cutaways-exploded-rig.md</code></a></li>
-        <li><strong>Section 06 (Interactive Callouts &amp; Lore):</strong> <a href="./06-callout-snippets-and-lore.md"><code>06-callout-snippets-and-lore.md</code></a></li>
-      </ul>
-    </section>
-
-    <section id="geometry">
-      <h2>01. Geometry, 3-Views, Dimensions &amp; Fuselage Stations</h2>
-      <table>
-        <thead>
-          <tr><th>Parameter</th><th>Imperial (Lockheed / USAF)</th><th>Metric (Blender <code>1.0 = 1m</code>)</th><th>Notes</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Airframe Length (excl. pitot)</strong></td><td><code>107 ft 5 in</code> (<code>1,289 in</code>)</td><td><strong><code>32.741 m</code></strong></td><td><code>FS 200.0</code> nose tip to <code>FS 1489.0</code> tailcone</td></tr>
-          <tr><td><strong>Physical Wingspan</strong></td><td><code>55 ft 7 in</code> (<code>667 in</code>)</td><td><strong><code>16.942 m</code></strong></td><td>NASA aero reference span <code>b = 17.282 m</code>; MAC <code>11.491 m</code></td></tr>
-          <tr><td><strong>Overall Height</strong></td><td><code>18 ft 6 in</code> (<code>222 in</code>)</td><td><strong><code>5.639 m</code></strong></td><td>Ground plane to rudder tip</td></tr>
-          <tr><td><strong>Wheelbase / Wheel Track</strong></td><td><code>37 ft 10 in</code> / <code>16 ft 8 in</code></td><td><strong><code>11.532 m</code> / <code>5.080 m</code></strong></td><td>Twin nose wheels; 3-wheel main bogies</td></tr>
-          <tr><td><strong>Wing Sweep &amp; Rudder Cant</strong></td><td><code>60.0°</code> LE sweep / <code>15.0°</code> inward cant</td><td><strong><code>60.0°</code> / <code>15.0°</code></strong></td><td>Outboard elevons rigged <code>+3.0°</code> trailing-edge up</td></tr>
-          <tr><td><strong>Nacelle Centerline Offset</strong></td><td><code>BL ±162 in</code> (~<code>13.5 ft</code>)</td><td><strong><code>±4.115 m</code></strong></td><td>Spikes toed inward <code>~1.5°</code> &amp; drooped <code>~2.5°</code> nose-down!</td></tr>
-        </tbody>
-      </table>
-
       <div class="grid">
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Lockheed_SR-71A_3view.svg" alt="SR-71A 3-View SVG" />
-          <div class="card-body">
-            <strong>Lockheed SR-71A Orthographic 3-View (Infinite SVG)</strong>
-            <div class="meta">Public Domain · Top / Side / Front Orthographic Blueprint</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/f/ff/Lockheed_SR-71A_3view.svg" target="_blank">Open Direct SVG</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Lockheed_SR-71B_trainer_model_3view.png" alt="SR-71B 3-View" />
-          <div class="card-body">
-            <strong>NASA / Lockheed 3-View Line Drawing</strong>
-            <div class="meta">1891 × 1300 PNG · Side, Top &amp; Front Reference</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/b/b3/Lockheed_SR-71B_trainer_model_3view.png" target="_blank">Open Direct PNG</a>
-          </div>
-        </div>
-      </div>
-
-      <h3>Authoritative NASA NTRS Engineering PDFs (Direct Links)</h3>
-      <ul>
-        <li><a href="https://ntrs.nasa.gov/api/citations/20000064011/downloads/20000064011.pdf">NASA/TP-2000-209023 — <em>The SR-71 Test Bed Aircraft</em></a> (3-view drawings, payload bays, stations <code>FS 683</code>, <code>FS 715</code>, <code>FS 942</code>, <code>FS 1038</code>, <code>FS 1135</code>)</li>
-        <li><a href="https://ntrs.nasa.gov/api/citations/20020057965/downloads/20020057965.pdf">NASA/TP-2002-210718 — <em>Stability and Control Estimation for the SR-71</em></a> (Geometry diagrams Figs. 1–3, control surface layout &amp; <code>FS/BL/WL</code> datum)</li>
-        <li><a href="https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf">AIAA 2009-1522 — <em>Design and Development of the Blackbird</em></a> (Titanium vs. composite chine structure &amp; thermal skin corrugations)</li>
-        <li><a href="https://ntrs.nasa.gov/api/citations/19740024172/downloads/19740024172.pdf">NASA-TM-X-3099 — <em>YF-12C (SR-71A) Airplane &amp; J58 Propulsion System</em></a> (Nacelle &amp; translating spike station geometry)</li>
-      </ul>
-    </section>
-
-    <section id="scans">
-      <h2>02. 3D Scans, Photogrammetry &amp; Downloadable Sub-Assemblies</h2>
-      <table>
-        <thead>
-          <tr><th>3D Asset / Scan</th><th>Polycount</th><th>License / Access</th><th>Link &amp; Role</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>SR-71A <code>61-7962</code> — IWM Duxford Museum Mesh</strong></td>
-            <td><code>186,323</code> tris</td>
-            <td><strong>CC0 Public Domain (Downloadable <code>.glb</code>)</strong></td>
-            <td><a href="https://sketchfab.com/3d-models/sr-71a-blackbird-61-7962-duxford-00c24dd3549a4f429dd1a0a2469e9ba4">Sketchfab Model</a> — Primary 1:1 airframe &amp; chine proportion ground truth</td>
-          </tr>
-          <tr>
-            <td><strong>GRADD Pratt &amp; Whitney J58 RealityCapture Scan</strong></td>
-            <td><code>2,499,747</code> tris</td>
-            <td>Inspectable 199-Photo 3D Scan (Seattle)</td>
-            <td><a href="https://sketchfab.com/3d-models/gradd-sr-71-blackbird-a12-j58-engine-3d-model-9fe852b2c84b442bb112aec9c8c8b29e">Sketchfab 3D Scan</a> — True 3D spatial reference for 6 bleed-bypass pipes &amp; plumbing</td>
-          </tr>
-          <tr>
-            <td><strong>Polycam LiDAR / Photogrammetry Blackbird Capture</strong></td>
-            <td>Spatial Scan</td>
-            <td>Public Polycam Capture (San Diego)</td>
-            <td><a href="https://poly.cam/capture/02BE69A5-AED5-43CF-8536-8B8435C541CF">Polycam 3D Capture</a> — Forward chine &amp; stance cross-check</td>
-          </tr>
-          <tr>
-            <td><strong><code>FGMEMBERS/Lockheed-SR71</code> Articulated Repo</strong></td>
-            <td><code>104</code> files (<code>.ac</code> + XML)</td>
-            <td><strong>GPL-2.0 Open Source (Git Clone)</strong></td>
-            <td><a href="https://github.com/FGMEMBERS/Lockheed-SR71">GitHub Repo</a> — Separated control surfaces, gear doors &amp; <strong>13 3D cockpit gauges</strong></td>
-          </tr>
-          <tr>
-            <td><strong>Pratt &amp; Whitney J58 Standalone High-Poly Mesh</strong></td>
-            <td><code>262,638</code> faces</td>
-            <td><strong>CC BY-NC-SA (Downloadable)</strong></td>
-            <td><a href="https://sketchfab.com/3d-models/j58-jet-engine-bca3015516304cfabe249cfad5363939">Sketchfab Download</a> — Ready-to-rig internal engine bay mesh</td>
-          </tr>
-          <tr>
-            <td><strong>Skeletal Blackbird (SR-71) Rib/Spar Reference</strong></td>
-            <td><code>5,303,966</code> tris</td>
-            <td>Inspectable 3D Structural Reference</td>
-            <td><a href="https://sketchfab.com/3d-models/skeletal-blackbirdsr-71-skeleton-ac3ed6faf9094ead90dabe22aceba2b7">Sketchfab Viewer</a> — Internal rib/bulkhead layout inside silhouette</td>
-          </tr>
-          <tr>
-            <td><strong>SR-71 Cockpit Controls &amp; TDI/ADI/IVSI Gauges</strong></td>
-            <td><code>1.5k–5.5k</code> faces ea.</td>
-            <td>Inspectable 3D Sub-Assemblies</td>
-            <td><a href="https://sketchfab.com/3d-models/sr-71-flightstick-448d8f5727af4f05b1017f6e6fb33587">Flightstick</a> · <a href="https://sketchfab.com/3d-models/sr-71-triple-display-indicator-second-version-da9d101f8c3844fe9da1f7cb5475e156">Triple Display Indicator</a> · <a href="https://sketchfab.com/3d-models/sr-71-attitude-indicator-3f2883f756a24efc80eb984f6e7c0055">ADI</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="photos">
-      <h2>03. Exterior Multi-Angle Reference Gallery (All Angles)</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/This_photo_shows_a_head-on_view_of_NASA%27s_SR-71B_on_the_ramp_at_the_Air_Force%27s_Plant_42_in_Palmdale%2C_California%2C_shortly_before_delivery_to_DFRC_%28EC91-0365-7%29.jpg" alt="Head-on SR-71" />
-          <div class="card-body">
-            <strong>Head-On Ramp Cross-Section (Palmdale)</strong>
-            <div class="meta">3000 × 2400 · Chine profile, conical wing camber &amp; 15° rudder cant</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/1/1c/This_photo_shows_a_head-on_view_of_NASA%27s_SR-71B_on_the_ramp_at_the_Air_Force%27s_Plant_42_in_Palmdale%2C_California%2C_shortly_before_delivery_to_DFRC_%28EC91-0365-7%29.jpg" target="_blank">Full Resolution</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Linear_Aerospike_SR-71_Experiment_%28LASRE%29_first_flight_view_from_above_%28EC97-44295-84%29.jpg" alt="Overhead Planform" />
-          <div class="card-body">
-            <strong>Overhead Dorsal Planform (NASA)</strong>
-            <div class="meta">2100 × 2400 · 60° delta planform, wing corrugations &amp; red walkways</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/5/55/Linear_Aerospike_SR-71_Experiment_%28LASRE%29_first_flight_view_from_above_%28EC97-44295-84%29.jpg" target="_blank">Full Resolution</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Lockheed_SR-71_Blackbird.jpg" alt="3/4 Dorsal Sierra" />
-          <div class="card-body">
-            <strong>20 MP Dorsal Wing Corrugation Detail</strong>
-            <div class="meta">5100 × 3996 · Stamped thermal expansion beads &amp; chine sawtooth tiles</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/9/97/Lockheed_SR-71_Blackbird.jpg" target="_blank">Full Resolution</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/SR-71_Landing_with_Drag_Chute_-_GPN-2000-001944.jpg" alt="Side Landing Profile" />
-          <div class="card-body">
-            <strong>Side Profile, Gear Stance &amp; Drag Chute</strong>
-            <div class="meta">5100 × 4000 · Extended gear geometry &amp; tailcone chute doors</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/4/4a/SR-71_Landing_with_Drag_Chute_-_GPN-2000-001944.jpg" target="_blank">Full Resolution</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Lockheed_SR-71_left_engine_spike_%286586704831%29_%285%29.jpg" alt="Inlet Spike" />
-          <div class="card-body">
-            <strong>Left Translating Inlet Spike Macro</strong>
-            <div class="meta">5184 × 3456 · Boundary-layer bleed perforations &amp; cowl lip</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/b/bc/Lockheed_SR-71_left_engine_spike_%286586704831%29_%285%29.jpg" target="_blank">Full Resolution</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Tires_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01031.jpg" alt="Silver Tires" />
-          <div class="card-body">
-            <strong>Aluminum-Impregnated Silver Main Gear Tires</strong>
-            <div class="meta">5023 × 3413 · 3-wheel bogie, struts &amp; heat-reflective silver rubber</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/1/1f/Tires_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01031.jpg" target="_blank">Full Resolution</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/SR-71_Landing_Gear_and_Entry_Door_%2849071408071%29.jpg" alt="Belly and Nose Gear" />
-          <div class="card-body">
-            <strong>Ventral Belly, Nose Gear &amp; Sensor Bay Doors</strong>
-            <div class="meta">6000 × 4000 · Udvar-Hazy underside &amp; twin nose gear</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/e/ea/SR-71_Landing_Gear_and_Entry_Door_%2849071408071%29.jpg" target="_blank">Full Resolution</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Lockheed_SR-71_jet_exhaust_detail%2C_National_Museum_of_the_US_Air_Force%2C_Dayton%2C_Ohio%2C_USA._%2831485223097%29.jpg" alt="Exhaust Nozzle" />
-          <div class="card-body">
-            <strong>Rear Blow-In Door Ejector Nozzle Detail</strong>
-            <div class="meta">3384 × 2511 · Tertiary blow-in doors &amp; turkey-feather petals</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/2/2a/Lockheed_SR-71_jet_exhaust_detail%2C_National_Museum_of_the_US_Air_Force%2C_Dayton%2C_Ohio%2C_USA._%2831485223097%29.jpg" target="_blank">Full Resolution</a>
-          </div>
-        </div>
-      </div>
-      <p><em>See <a href="./03-exterior-multi-angle-photos.md"><code>03-exterior-multi-angle-photos.md</code></a> for all 25+ exterior walkaround photos including the full USAF Museum Cold War Gallery studio set.</em></p>
-    </section>
-
-    <section id="cockpits">
-      <h2>04. Pilot &amp; RSO Cockpits, 360° Virtual Tours &amp; Flight Manual</h2>
-      <ul>
-        <li><strong>360° Pilot Front Cockpit Interactive Tour (USAF Museum):</strong> <a href="http://www.nmusafvirtualtour.com/media/068/SR-71A%20Front%20Cockpit.html" target="_blank"><code>SR-71A Front Cockpit.html</code></a></li>
-        <li><strong>360° RSO Rear Cockpit Interactive Tour (USAF Museum):</strong> <a href="http://www.nmusafvirtualtour.com/media/068/SR-71A%20Rear%20Cockpit.html" target="_blank"><code>SR-71A Rear Cockpit.html</code></a></li>
-        <li><strong>Declassified USAF <code>T.O. 1SR-71A-1</code> Flight Manual PDFs (Direct Download):</strong>
-          <a href="https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_text.pdf">Part 1 (Cockpit &amp; Systems Schematics)</a> ·
-          <a href="https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__02_text.pdf">Part 2 (Procedures)</a> ·
-          <a href="https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__03_text.pdf">Part 3 (ANS Star-Tracker &amp; Aux)</a>
-        </li>
-      </ul>
-      <div class="grid">
-        <div class="card">
-          <img src="https://media.defense.gov/2007/Jan/16/2000521412/2000/2000/0/070116-F-1234S-013.JPG" alt="Pilot Cockpit Main" />
-          <div class="card-body">
-            <strong>Forward Pilot Cockpit — Main Instrument Panel</strong>
-            <div class="meta">USAF Museum Public Domain</div>
-            <a href="https://media.defense.gov/2007/Jan/16/2000521412/-1/-1/0/070116-F-1234S-013.JPG" target="_blank">Download Uncompressed Original</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://media.defense.gov/2010/May/10/2000521423/2000/2000/0/070116-F-1234S-010.JPG" alt="Pilot Left Console" />
-          <div class="card-body">
-            <strong>Pilot Left Console — Throttles &amp; Spike Controls</strong>
-            <div class="meta">USAF Museum Public Domain</div>
-            <a href="https://media.defense.gov/2010/May/10/2000521423/-1/-1/0/070116-F-1234S-010.JPG" target="_blank">Download Uncompressed Original</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://media.defense.gov/2020/Feb/25/2002254473/2000/2000/0/200225-F-IO108-001.JPG" alt="RSO Rear Cockpit" />
-          <div class="card-body">
-            <strong>Rear RSO Cockpit — Nav Viewfinder &amp; Sensor Consoles</strong>
-            <div class="meta">USAF Museum Public Domain</div>
-            <a href="https://media.defense.gov/2020/Feb/25/2002254473/-1/-1/0/200225-F-IO108-001.JPG" target="_blank">Download Uncompressed Original</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/SR-71_Systems_operators_cockpit%2C_controls%2C_instruments%2C_ejection_seat_%284527964406%29.jpg" alt="Weber Ejection Seat" />
-          <div class="card-body">
-            <strong>Weber Zero-Zero Ejection Seat &amp; Canopy Cylinder</strong>
-            <div class="meta">3502 × 2398 · Orange-red cushions &amp; gold hydraulic strut</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/b/bb/SR-71_Systems_operators_cockpit%2C_controls%2C_instruments%2C_ejection_seat_%284527964406%29.jpg" target="_blank">Full Resolution</a>
-          </div>
-        </div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Lockheed_SR-71A_3view.svg" alt="3-View SVG"/><div class="card-body"><strong>Orthographic 3-View Blueprint (SVG)</strong><a href="https://upload.wikimedia.org/wikipedia/commons/f/ff/Lockheed_SR-71A_3view.svg" target="_blank">Open Vector SVG</a></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/SR71_J58_Engine_Airflow_Patterns.svg" alt="J58 Cutaway SVG"/><div class="card-body"><strong>J58 Nacelle &amp; Bleed-Bypass Cutaway (SVG)</strong><a href="https://upload.wikimedia.org/wikipedia/commons/8/89/SR71_J58_Engine_Airflow_Patterns.svg" target="_blank">Open Vector Cutaway</a></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/This_photo_shows_a_head-on_view_of_NASA%27s_SR-71B_on_the_ramp_at_the_Air_Force%27s_Plant_42_in_Palmdale%2C_California%2C_shortly_before_delivery_to_DFRC_%28EC91-0365-7%29.jpg" alt="Head On"/><div class="card-body"><strong>Pure Head-On Cross-Section (Chines &amp; Cant)</strong><a href="https://upload.wikimedia.org/wikipedia/commons/1/1c/This_photo_shows_a_head-on_view_of_NASA%27s_SR-71B_on_the_ramp_at_the_Air_Force%27s_Plant_42_in_Palmdale%2C_California%2C_shortly_before_delivery_to_DFRC_%28EC91-0365-7%29.jpg" target="_blank">3000 × 2400 Original</a></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Lockheed_SR-71_Blackbird.jpg" alt="Dorsal Corrugations"/><div class="card-body"><strong>Dorsal Planform &amp; Wing Skin Corrugations</strong><a href="https://upload.wikimedia.org/wikipedia/commons/9/97/Lockheed_SR-71_Blackbird.jpg" target="_blank">5100 × 3996 Original</a></div></div>
+        <div class="card"><img src="https://media.defense.gov/2007/Jan/16/2000521412/2000/2000/0/070116-F-1234S-013.JPG" alt="Pilot Cockpit"/><div class="card-body"><strong>Forward Pilot Cockpit Instrument Panel</strong><a href="https://media.defense.gov/2007/Jan/16/2000521412/-1/-1/0/070116-F-1234S-013.JPG" target="_blank">Full USAF Hi-Res</a></div></div>
+        <div class="card"><img src="https://media.defense.gov/2020/Feb/25/2002254473/2000/2000/0/200225-F-IO108-001.JPG" alt="RSO Cockpit"/><div class="card-body"><strong>Rear RSO Cockpit &amp; Nav Viewfinder</strong><a href="https://media.defense.gov/2020/Feb/25/2002254473/-1/-1/0/200225-F-IO108-001.JPG" target="_blank">Full USAF Hi-Res</a></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/At_the_Intrepid_Museum_2023_122.jpg" alt="Bare J58"/><div class="card-body"><strong>Bare J58 Engine &amp; 6 Bleed-Bypass Pipes</strong><a href="https://upload.wikimedia.org/wikipedia/commons/3/38/At_the_Intrepid_Museum_2023_122.jpg" target="_blank">6960 × 4640 Original</a></div></div>
+        <div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Technical_Objective_Camera_%28TEOC%29%2C_No._36%2C_Hycon_Corporation_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01063.jpg" alt="TEOC Camera"/><div class="card-body"><strong>Hycon TEOC Chine Reconnaissance Camera</strong><a href="https://upload.wikimedia.org/wikipedia/commons/c/c8/Technical_Objective_Camera_%28TEOC%29%2C_No._36%2C_Hycon_Corporation_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01063.jpg" target="_blank">5472 × 3648 Original</a></div></div>
       </div>
     </section>
 
-    <section id="inner-workings">
-      <h2>05. Inner Workings, J58 Cutaways &amp; Blender Exploded-View Rig</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/SR71_J58_Engine_Airflow_Patterns.svg" alt="J58 Airflow Cutaway SVG" />
-          <div class="card-body">
-            <strong>J58 Nacelle Cutaway &amp; Airflow (Mach 0 → 3.2 SVG)</strong>
-            <div class="meta">Vector Cutaway · Spike translation, bleed louvers &amp; ejector</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/8/89/SR71_J58_Engine_Airflow_Patterns.svg" target="_blank">Open Vector SVG</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/At_the_Intrepid_Museum_2023_122.jpg" alt="Bare J58 Engine" />
-          <div class="card-body">
-            <strong>32 MP Bare J58 Engine &amp; 6 External Bleed-Bypass Pipes</strong>
-            <div class="meta">6960 × 4640 · Compressor stage-4 bypass ducts into afterburner</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/3/38/At_the_Intrepid_Museum_2023_122.jpg" target="_blank">Full Resolution</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Technical_Objective_Camera_%28TEOC%29%2C_No._36%2C_Hycon_Corporation_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01063.jpg" alt="Hycon TEOC Camera" />
-          <div class="card-body">
-            <strong>Hycon TEOC No. 36 Chine Reconnaissance Camera</strong>
-            <div class="meta">5472 × 3648 · Internal forward chine optical bay payload</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/c/c8/Technical_Objective_Camera_%28TEOC%29%2C_No._36%2C_Hycon_Corporation_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01063.jpg" target="_blank">Full Resolution</a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Sr-71-composit.gif" alt="Composite Material Map" />
-          <div class="card-body">
-            <strong>85% Beta-Titanium vs. 15% Composite Structural Map</strong>
-            <div class="meta">1000 × 801 · Sawtooth radar-absorbing chine &amp; trailing-edge zones</div>
-            <a href="https://upload.wikimedia.org/wikipedia/commons/8/85/Sr-71-composit.gif" target="_blank">Full Diagram</a>
-          </div>
-        </div>
+    
+    <section id="01-geometry" class="pack-section">
+      <div class="sec-header">
+        <h2>01. Geometry, 3-Views &amp; Fuselage Stations</h2>
+        <a class="raw-pill" href="./01-geometry-blueprints-stations.md" target="_blank">Raw Markdown (01-geometry-blueprints-stations.md)</a>
       </div>
-
-      <h3>Blender MCP 10-Collection Exploded-View Rig Specification</h3>
-      <pre>SR71_Master_Root (Metric 1.0 = 1m | Driven by Custom Property Explode_Factor: 0.0 -> 1.0)
-├── 01_Nose_Recon_Module          [Radome -3.5m axial; OBC/ASARS-1 payload -1.8m axial]
-├── 02_Cockpit_Crew_Module        [Clamshell canopies +2.2m Z / +35°; Weber seats +3.8m Z; Pilot/RSO tubs anchored]
-├── 03_Avionics_And_Chine_Bays    [Nortronics ANS "R2-D2" +1.6m Z; Left/Right TEOC cameras ±2.0m X, -0.8m Z]
-├── 04_Fuselage_JP7_Fuel_System   [Tanks 1 through 6A translucent amber heat-sink volumes + dorsal refuel manifold]
-├── 05_Fuselage_Titanium_Skeleton [Milled Ti ring-frames FS295-FS1260 anchored; Dorsal skin +3.2m Z; Belly -2.4m Z]
-├── 06_Inner_And_Outer_Wings      [Titanium spar grid anchored; Corrugated skins ±2.0m Z; Sawtooth edges ±2.8m X]
-├── 07_Left_Propulsion_Pod        [Spike -4.5m; Upper/Lower cowls ±2.6m Z; J58 + 6 bypass pipes exposed; Ejector +4.2m]
-├── 08_Right_Propulsion_Pod       [Mirrored at X = +4.115m with 1.5° inward toe-in &amp; 2.5° nose-down droop]
-├── 09_Flight_Control_Surfaces    [Twin 15° inward-canted all-moving rudders +2.8m; Inboard/Outboard elevons +2.0m aft]
-└── 10_Landing_Gear_Assemblies    [Twin nose gear &amp; 3-wheel aluminum-impregnated silver main bogies -2.2m Z]</pre>
+      <h3>Lockheed SR-71A Blackbird — Authoritative Blender Scale &amp; Coordinate Spec</h3>
+<div class="callout"><strong>Purpose for Astra / Opus 5.5 + Blender MCP:</strong> Use these verified NASA Dryden / USAF <code>T.O. 1SR-71A-1</code> dimensions and Fuselage Station (<code>FS</code>) coordinates as the master scene rig before blocking out or importing any mesh. Set Blender scene units to <strong>Metric (<code>1.0 unit = 1.0 meter</code>)</strong>, aircraft nose pointing along <strong><code>-Y</code></strong> (or <code>+Y</code> per rig convention; below maps <code>FS</code> inches directly to meters from the nose datum).</div>
+<hr/>
+<h3>1. Master Principal Dimensions (SR-71A)</h3>
+<table><thead><tr><th>Parameter</th><th>Imperial (USAF / Lockheed)</th><th>Metric (Blender Scene Units)</th><th>Source</th></tr></thead><tbody>
+<tr><td><strong>Overall Length (Airframe, excl. nose pitot boom)</strong></td><td><code>107 ft 5 in</code> (<code>1,289.0 in</code>)</td><td><strong><code>32.741 m</code></strong></td><td>USAF Fact Sheet / <code>T.O. 1SR-71A-1</code></td></tr>
+<tr><td><strong>Overall Length (incl. nose pitot boom)</strong></td><td><code>107 ft 5 in</code> + pitot (~<code>3 ft 1 in</code> probe)</td><td>~<code>33.68 m</code> (verify against 3-view SVG)</td><td>Lockheed general arrangement</td></tr>
+<tr><td><strong>Physical Wingspan</strong></td><td><code>55 ft 7 in</code> (<code>667.0 in</code>)</td><td><strong><code>16.942 m</code></strong></td><td>USAF Fact Sheet / <code>T.O. 1SR-71A-1</code></td></tr>
+<tr><td><strong>NASA Aerodynamic Reference Span ($b$)</strong></td><td><code>56.70 ft</code></td><td><strong><code>17.282 m</code></strong></td><td><code>NASA/TM-1998-206567</code> / <code>NASA/TP-2002-210718</code></td></tr>
+<tr><td><strong>Mean Aerodynamic Chord ($\bar{c}$)</strong></td><td><code>37.70 ft</code></td><td><strong><code>11.491 m</code></strong></td><td><code>NASA/TM-1998-206567</code></td></tr>
+<tr><td><strong>Reference Wing Area ($S$)</strong></td><td><code>1,605 sq ft</code> (planform <code>1,800 sq ft</code>)</td><td><strong><code>149.11 m²</code></strong> (<code>167.23 m²</code> total delta)</td><td>NASA Dryden / Lockheed</td></tr>
+<tr><td><strong>Overall Height (ground to rudder tip)</strong></td><td><code>18 ft 6 in</code> (<code>222.0 in</code>)</td><td><strong><code>5.639 m</code></strong></td><td>USAF Fact Sheet / <code>T.O. 1SR-71A-1</code></td></tr>
+<tr><td><strong>Wheelbase (Nose Gear to Main Gear)</strong></td><td><code>37 ft 10 in</code> (<code>454.0 in</code>)</td><td><strong><code>11.532 m</code></strong></td><td>Lockheed SR-71A Spec</td></tr>
+<tr><td><strong>Wheel Track (Left Main to Right Main)</strong></td><td><code>16 ft 8 in</code> (<code>200.0 in</code>)</td><td><strong><code>5.080 m</code></strong></td><td>Lockheed SR-71A Spec</td></tr>
+<tr><td><strong>Outer Wing Leading-Edge Sweep</strong></td><td><code>60.0°</code> (sharp nose-chine transition forward)</td><td><strong><code>60.0°</code></strong> (with conical camber on outer LE)</td><td><code>NASA/TP-2000-209023</code></td></tr>
+<tr><td><strong>Twin All-Moving Rudder Cant Angle</strong></td><td><code>15.0°</code> <strong>inward</strong> toward centerline</td><td><strong><code>15.0°</code> inward</strong> (pivots atop nacelles)</td><td><code>T.O. 1SR-71A-1</code></td></tr>
+<tr><td><strong>Engine Nacelle Centerline Spanwise Offset</strong></td><td><code>BL ±162 in</code> (~<code>13.5 ft</code> from centerline)</td><td><strong><code>±4.115 m</code> from <code>X = 0</code></strong></td><td>NASA Dryden YF-12C / SR-71 layout</td></tr>
+<tr><td><strong>Nacelle Diameter (max outer cowl)</strong></td><td>~<code>5 ft 6 in</code> (<code>66 in</code> nominal around J58)</td><td>~<strong><code>1.676 m</code></strong></td><td>J58 <code>50 in</code> engine + bypass ducts</td></tr>
+<tr><td><strong>Outboard Elevon Rigging Incidence</strong></td><td><code>3.0°</code> trailing-edge-up relative to inboard</td><td><strong><code>+3.0°</code> TE-up</strong></td><td><code>NASA/TM-1998-206567</code></td></tr>
+</tbody></table>
+<hr/>
+<h3>2. Verified 3-View Vector &amp; NASA Engineering Drawings</h3>
+<h4>Primary Orthographic 3-View (SVG Vector — Direct Download)</h4>
+<ul>
+<li><strong>Wikimedia Commons Vector 3-View (<code>Lockheed_SR-71A_3view.svg</code>):</strong></li>
+<li><strong>Direct SVG URL:</strong> <a href="https://upload.wikimedia.org/wikipedia/commons/f/ff/Lockheed_SR-71A_3view.svg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/f/ff/Lockheed_SR-71A_3view.svg</a></li>
+<li><strong>Resolution / Type:</strong> Infinite-resolution <code>image/svg+xml</code> (<code>1854 × 1419</code> viewbox), Public Domain.</li>
+<li><strong>Blender MCP Usage:</strong> Convert or rasterize at <code>8192 px</code> width and place on Top (<code>XY</code>), Side (<code>YZ</code>), and Front (<code>XZ</code>) reference empty planes scaled so fuselage length equals <code>32.741 m</code>.</li>
+</ul>
+<h4>Primary NASA Technical Reports with Engineering 3-Views, Stations &amp; Cross-Sections (Direct PDFs)</h4>
+<ul>
+<li>*<em>NASA/TP-2000-209023 — </em>The SR-71 Test Bed Aircraft: A Facility for High-Speed Flight Research***</li>
+<li><strong>Direct PDF:</strong> <a href="https://ntrs.nasa.gov/api/citations/20000064011/downloads/20000064011.pdf" target="_blank">https://ntrs.nasa.gov/api/citations/20000064011/downloads/20000064011.pdf</a></li>
+<li><strong>Citation Page:</strong> <a href="https://ntrs.nasa.gov/citations/20000064011" target="_blank">https://ntrs.nasa.gov/citations/20000064011</a></li>
+<li><strong>Key Modeling Content:</strong> Baseline SR-71A 3-view schematic drawings, nose/chine payload bay geometry, dorsal payload hardpoints, fuselage station thermal &amp; structural load distributions (<code>FS 683</code>, <code>FS 942</code>, <code>FS 1038</code>, <code>FS 1135</code>).</li>
+<li>*<em>NASA/TP-2002-210718 — </em>Stability and Control Estimation Flight Test Results for the SR-71 Aircraft With Externally Mounted Experiments***</li>
+<li><strong>Direct PDF:</strong> <a href="https://ntrs.nasa.gov/api/citations/20020057965/downloads/20020057965.pdf" target="_blank">https://ntrs.nasa.gov/api/citations/20020057965/downloads/20020057965.pdf</a></li>
+<li><strong>Citation Page:</strong> <a href="https://ntrs.nasa.gov/citations/20020057965" target="_blank">https://ntrs.nasa.gov/citations/20020057965</a></li>
+<li><strong>Key Modeling Content:</strong> Figures 1–3 baseline SR-71A geometry, control surface breakdown (inboard elevons, outboard elevons, twin all-moving rudders), and exact <code>FS</code> / <code>BL</code> / <code>WL</code> coordinate system definitions.</li>
+<li>*<em>NASA/TM-1998-206567 — </em>Flight Stability and Control and Performance Results from the Linear Aerospike SR-71 Experiment (LASRE)***</li>
+<li><strong>Direct PDF:</strong> <a href="https://ntrs.nasa.gov/api/citations/19980231067/downloads/19980231067.pdf" target="_blank">https://ntrs.nasa.gov/api/citations/19980231067/downloads/19980231067.pdf</a></li>
+<li><strong>Key Modeling Content:</strong> Geometric nomenclature ($b = 56.7\text{ ft}$, $\bar{c} = 37.7\text{ ft}$), structural attachment points, elevon/rudder rigging angles.</li>
+<li>*<em>AIAA 2009-1522 (Peter W. Merlin, NASA Dryden) — </em>Design and Development of the Blackbird: Challenges and Lessons Learned***</li>
+<li><strong>Direct PDF:</strong> <a href="https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf" target="_blank">https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf</a></li>
+<li><strong>Key Modeling Content:</strong> Structural material map (<code>85%</code> Titanium <code>Ti-13V-11Cr-3Al</code> Beta-alloy &amp; <code>Ti-6Al-4V</code>, <code>15%</code> high-temperature phenyl-silane / asbestos-laminate radar-absorbing composite chines and trailing edges), corrugations/chordwise thermal expansion bead patterns on upper/lower wing skins.</li>
+<li>*<em>NASA-TM-X-3099 — </em>Description of YF-12C Airplane, Propulsion System, and Instrumentation for Propulsion Research Flight Tests***</li>
+<li><strong>Direct PDF:</strong> <a href="https://ntrs.nasa.gov/api/citations/19740024172/downloads/19740024172.pdf" target="_blank">https://ntrs.nasa.gov/api/citations/19740024172/downloads/19740024172.pdf</a></li>
+<li><strong>Key Modeling Content:</strong> Note: &quot;YF-12C&quot; (<code>61-7951</code>) was actually an <strong>SR-71A airframe</strong> loaned to NASA under a cover designation! This report contains detailed J58 nacelle station diagrams, translating spike travel (<code>26 inches</code> axial translation), forward/aft bypass doors, suck-in doors, and ejector nozzle geometry.</li>
+</ul>
+<hr/>
+<h3>3. Lockheed Coordinate System (<code>FS</code>, <code>BL</code>, <code>WL</code>) for Sub-Assembly Placement</h3>
+<p>Lockheed&#x27;s engineering datum defines coordinates in <strong>inches</strong>:</p>
+<ul>
+<li><strong>Fuselage Station (<code>FS</code>):</strong> Longitudinal distance aft from a virtual datum ahead of the nose (<code>FS 200.0</code> ≈ nose radome tip on standard SR-71A station charts; aft tailcone / drag-chute fairing terminates near <code>FS 1489.0</code>, spanning <code>1,289 in = 107 ft 5 in</code>).</li>
+<li><strong>Butt Line (<code>BL</code>):</strong> Lateral distance left/right from fuselage centerline (<code>BL 0.0</code>).</li>
+<li><strong>Water Line (<code>WL</code>):</strong> Vertical height above horizontal reference plane below the belly (<code>WL 100.0</code> ≈ fuselage chine/reference horizontal plane).</li>
+</ul>
+<h4>Documented Axial Stations &amp; Structural Bulkheads</h4>
+<table><thead><tr><th>Station (<code>FS</code> in)</th><th>Metric Offset from Nose Tip (<code>FS - 200</code> × <code>0.0254 m</code>)</th><th>Component / Internal Feature (for Exploded View Slicing)</th></tr></thead><tbody>
+<tr><td><strong><code>FS 200.0</code></strong></td><td><code>0.00 m</code></td><td>Nose cone radome tip (detachable Nose Bay — Optical Bar Camera / Radar)</td></tr>
+<tr><td><strong><code>FS 295 – 375</code></strong></td><td><code>2.41 – 4.45 m</code></td><td>Detachable Nose Cone Bulkhead &amp; Forward Chine Equipment Bays (<code>E</code> / <code>F</code> bays)</td></tr>
+<tr><td><strong><code>FS 375 – 465</code></strong></td><td><code>4.45 – 6.73 m</code></td><td><strong>Forward Cockpit (Pilot Station)</strong>: clamshell V-windscreen, instrument shroud, Weber zero-zero ejection seat</td></tr>
+<tr><td><strong><code>FS 465 – 545</code></strong></td><td><code>6.73 – 8.76 m</code></td><td><strong>Aft Cockpit (RSO Station)</strong>: twin small side windows, sensor/navigation consoles, RSO ejection seat</td></tr>
+<tr><td><strong><code>FS 545 – 605</code></strong></td><td><code>8.76 – 10.29 m</code></td><td><strong>Nortronics NAS-14V2 Astro-Inertial Navigation System (ANS)</strong> (&quot;R2-D2&quot; star-tracker behind RSO, viewing sky through dorsal quartz window) + Forward Nose Gear Well below</td></tr>
+<tr><td><strong><code>FS 605 – 683</code></strong></td><td><code>10.29 – 12.27 m</code></td><td><strong>Fuel Tank 1</strong> (forward fuselage tank) + lower fuselage sensor/camera bays (<code>A/B/C</code> bays) &amp; <code>FS 683.0</code> (<code>BL 32.5, WL 86.2</code>) gyro/accelerometer bay</td></tr>
+<tr><td><strong><code>FS 715.0</code></strong></td><td><code>13.08 m</code></td><td><strong>Primary Wing-to-Fuselage Structural Carry-Through Joint</strong> &amp; <strong>Fuel Tank 2</strong> + Dorsal In-Flight Refueling Receptacle</td></tr>
+<tr><td><strong><code>FS 780 – 942</code></strong></td><td><code>14.73 – 18.85 m</code></td><td><strong>Fuel Tank 3 &amp; Tank 4</strong> (integral titanium fuselage tanks) + <strong>Inlet Spike Tip &amp; Forward Nacelle Cowls</strong> outboard at <code>BL ±162</code></td></tr>
+<tr><td><strong><code>FS 942 – 1080</code></strong></td><td><code>18.85 – 22.35 m</code></td><td><strong>Main Landing Gear Bays</strong> (retract inward into fuselage/wing root; 3-wheel titanium-impregnated silver tires per bogie), <strong>Fuel Tank 5</strong>, and <strong>Pratt &amp; Whitney J58 Core Compressor/Turbine</strong></td></tr>
+<tr><td><strong><code>FS 1080 – 1260</code></strong></td><td><code>22.35 – 26.92 m</code></td><td><strong>Fuel Tank 6A (Aft Trim Tank)</strong>, <strong>J58 Afterburner Ducts</strong>, and <strong>Twin All-Moving Cantilevered Rudders</strong> (<code>FS 1135</code> mid-tail thermal station)</td></tr>
+<tr><td><strong><code>FS 1260 – 1489</code></strong></td><td><code>26.92 – 32.74 m</code></td><td><strong>Free-Floating Blow-In Door Ejector Nozzles</strong>, <strong>Inboard/Outboard Elevons</strong>, and <strong>Aft Tailcone / Drag Parachute Compartment</strong></td></tr>
+</tbody></table>
+<hr/>
+<h3>4. Key Airframe Surface &amp; Silhouette Nuances (Critical for Accuracy)</h3>
+<ul>
+<li><strong>Blended Chine Cross-Section (&quot;Cobra Hood&quot;):</strong></li>
+<li>The forward fuselage is <strong>not</strong> a simple cylinder: lateral sharp chines blend smoothly from the nose tip all the way into the <code>60°</code> delta wing leading edge, generating vortex lift at supersonic speeds and reducing radar cross-section.</li>
+<li><strong>Inward Engine Nacelle Toe-In &amp; Downward Droop:</strong></li>
+<li>The J58 inlet nacelles are <strong>toed inward slightly toward the fuselage centerline</strong> (~<code>1.2°–1.5°</code> toe-in) and <strong>drooped downward</strong> (~<code>2.5°–3°</code> nose-down incidence) at the front so the translating inlet spikes align directly with the local Mach 3.2 under-chine shockwave/upwash flowfield! Modeling them strictly parallel to <code>Y</code> and <code>Z</code> is the #1 mistake on amateur SR-71 models.</li>
+<li><strong>Conical Camber on Outer Wing Leading Edges:</strong></li>
+<li>Outboard of the engine nacelles, the delta wing leading edges droop downward in a <strong>conical camber</strong> curve, and the wingtips curve slightly downward.</li>
+<li><strong>Chordwise Skin Corrugations:</strong></li>
+<li>Both upper and lower wing surfaces between the fuselage and nacelles (and outboard) feature <strong>prominent chordwise stamped corrugations</strong> (expansion beads) so the <code>Ti-13V-11Cr-3Al</code> skin can expand thermally at <code>500–600 °F</code> without buckling the spars. Model these via high-resolution normal/displacement maps or array-instanced bevel strips.</li>
+<li><strong>Composite &quot;Pie-Slice&quot; Sawtooth Chines:</strong></li>
+<li>Along the chine edges and wing trailing edges, triangular (&quot;dog-tooth&quot; / sawtooth) radar-absorbing phenyl-silane composite tiles alternate with titanium structure.</li>
+</ul>
     </section>
-
-    <section id="callouts">
-      <h2>06. Phase-2 Interactive Examination Callouts</h2>
-      <p>All <strong>12 subsystem inspection cards</strong> (covering Beta-titanium thermal expansion, <code>54%</code> inlet spike thrust recovery, J58 4th-stage bleed-bypass + <code>TEB</code> green chemical ignition, <code>JP-7</code> fuel heat-sink routing, <code>NAS-14V2</code> daylight star-tracking, and nitrogen-pressurized silver tires) are formatted and ready for ingestion in <a href="./06-callout-snippets-and-lore.md"><code>06-callout-snippets-and-lore.md</code></a>.</p>
+  
+    <section id="02-scans" class="pack-section">
+      <div class="sec-header">
+        <h2>02. 3D Scans, Photogrammetry &amp; Open Meshes</h2>
+        <a class="raw-pill" href="./02-3d-scans-and-meshes.md" target="_blank">Raw Markdown (02-3d-scans-and-meshes.md)</a>
+      </div>
+      <h3>Downloadable &amp; Inspectable 3D References for Blender MCP</h3>
+<div class="callout"><strong>Important Museum Scan Status Note (Verified Oct 2026):</strong> Neither NASA&#x27;s <code>nasa3d.arc.nasa.gov</code> repository nor the Smithsonian <code>3d.si.edu</code> portal currently publishes an official downloadable 3D mesh of the SR-71A (Smithsonian&#x27;s Udvar-Hazy SR-71 record <code>nasm_A19920072000</code> is 2D media only). However, <strong>museum photogrammetry captures</strong> (IWM Duxford <code>61-7962</code>, Museum of Flight Seattle <code>J58</code> RealityCapture scan, and San Diego Polycam LiDAR capture) plus <strong>open-source articulated CAD/AC3D sub-assemblies</strong> are publicly available and cataloged below.</div>
+<hr/>
+<h3>1. Photogrammetry &amp; LiDAR Scans (Real Museum Hardware)</h3>
+<table><thead><tr><th>Asset / Museum Subject</th><th>Type &amp; Polycount</th><th>License / Download</th><th>Direct URL &amp; Blender Usage</th></tr></thead><tbody>
+<tr><td><strong>SR-71A Blackbird <code>61-7962</code> — American Air Museum, IWM Duxford</strong> (<code>mgg8</code>)</td><td>Museum-preserved SR-71A 3D mesh (<code>186,323</code> tris / <code>88,455</code> verts) with embedded textures, twin nacelles, inlet spikes &amp; red markings</td><td><strong>CC0 1.0 Public Domain — Downloadable</strong> (<code>.glb</code> / <code>.gltf</code> / <code>.usdz</code>)</td><td><strong>Viewer &amp; Download:</strong> <a href="https://sketchfab.com/3d-models/sr-71a-blackbird-61-7962-duxford-00c24dd3549a4f429dd1a0a2469e9ba4" target="_blank">https://sketchfab.com/3d-models/sr-71a-blackbird-61-7962-duxford-00c24dd3549a4f429dd1a0a2469e9ba4</a> <br/><strong>Preview Thumb:</strong> <a href="https://media.sketchfab.com/models/00c24dd3549a4f429dd1a0a2469e9ba4/thumbnails/41f0dd0c10864649a5a2294c7d089e47/fac607f2428642fd8663529633afb193.jpeg" target="_blank">https://media.sketchfab.com/models/00c24dd3549a4f429dd1a0a2469e9ba4/thumbnails/41f0dd0c10864649a5a2294c7d089e47/fac607f2428642fd8663529633afb193.jpeg</a> <br/><em>Use as primary 1:1 proportion &amp; chine-curvature ground-truth overlay in Blender.</em></td></tr>
+<tr><td><strong>GRADD Pratt &amp; Whitney J58 Engine Photogrammetry Scan — Museum of Flight, Seattle</strong> (<code>gradd</code>)</td><td><strong>199-photo RealityCapture photogrammetry scan</strong> (<code>2,499,747</code> tris / <code>1,249,760</code> verts) of an actual bare J58 (<code>JT11D-20</code>) turbojet</td><td>Inspectable 3D WebGL Photogrammetry Reference (Editorial)</td><td><strong>3D Scan Viewer:</strong> <a href="https://sketchfab.com/3d-models/gradd-sr-71-blackbird-a12-j58-engine-3d-model-9fe852b2c84b442bb112aec9c8c8b29e" target="_blank">https://sketchfab.com/3d-models/gradd-sr-71-blackbird-a12-j58-engine-3d-model-9fe852b2c84b442bb112aec9c8c8b29e</a> <br/><strong>Preview Thumb:</strong> <a href="https://media.sketchfab.com/models/9fe852b2c84b442bb112aec9c8c8b29e/thumbnails/c6c3c3accc1a47d49e30517e0f7d2fa8/777ab3c94aee4ad099274c5a7056d34a.jpeg" target="_blank">https://media.sketchfab.com/models/9fe852b2c84b442bb112aec9c8c8b29e/thumbnails/c6c3c3accc1a47d49e30517e0f7d2fa8/777ab3c94aee4ad099274c5a7056d34a.jpeg</a> <br/><em>Essential 360° spatial ground-truth for plumbing, 6 external bleed-bypass tubes, fuel manifold, and afterburner cans.</em></td></tr>
+<tr><td><strong>Lockheed SR-71 Blackbird LiDAR / Photogrammetry Capture — San Diego Air &amp; Space Museum (<code>A-12 / Blackbird</code>)</strong> (<code>mdeetjen</code>)</td><td>Polycam Object-Mode LiDAR + photogrammetry spatial capture</td><td>Public Polycam 3D Capture</td><td><strong>3D Capture Viewer:</strong> <a href="https://poly.cam/capture/02BE69A5-AED5-43CF-8536-8B8435C541CF" target="_blank">https://poly.cam/capture/02BE69A5-AED5-43CF-8536-8B8435C541CF</a> <br/><em>Useful for checking forward chine cross-sections and ground stance.</em></td></tr>
+</tbody></table>
+<hr/>
+<h3>2. Open-Source Articulated Aircraft &amp; Cockpit Instrument Meshes (Direct Git Clone / Download)</h3>
+<h4>A. <code>FGMEMBERS/Lockheed-SR71</code> (GPL-2.0 — Complete Articulated AC3D <code>.ac</code> + XML Hierarchy)</h4>
+<ul>
+<li><strong>GitHub Repository:</strong> <a href="https://github.com/FGMEMBERS/Lockheed-SR71" target="_blank">https://github.com/FGMEMBERS/Lockheed-SR71</a></li>
+<li><strong>Author:</strong> Emmanuel Baranger (<code>helijah</code>)</li>
+<li><strong>Total 3D/Texture/Rig Files:</strong> <code>104</code> files (<code>Models/*.ac</code> ASCII AC3D meshes—directly readable by Python or Blender AC3D importer—plus XML pivot/axis definitions and <code>.png</code> gauge textures).</li>
+<li><strong>Why This Is Gold for Blender MCP:</strong></li>
+<li>Contains <strong>separated, named sub-meshes and exact pivot coordinates</strong> in XML for control surfaces (inboard/outboard elevons, twin rudders, landing gear struts/doors, canopy) AND <strong>13 individual 3D cockpit instruments</strong>:</li>
+<li>Attitude Indicator: <code>Models/Interior/Panel/Instruments/ai/ai.ac</code></li>
+<li>Altimeter: <code>Models/Interior/Panel/Instruments/altimeter/altimeter.ac</code></li>
+<li>Clock: <code>Models/Interior/Panel/Instruments/clock/clock.ac</code></li>
+<li>Dual EGT Gauges: <code>Models/Interior/Panel/Instruments/egt/egt.ac</code></li>
+<li>Fuel Quantity / Flow: <code>Models/Interior/Panel/Instruments/fuel/fuel.ac</code></li>
+<li>Horizontal Situation Indicator (HSI): <code>Models/Interior/Panel/Instruments/hsi/hsi.ac</code></li>
+<li>Mach / KEAS Indicator: <code>Models/Interior/Panel/Instruments/mach/mach.ac</code></li>
+<li>Magnetic Compass: <code>Models/Interior/Panel/Instruments/mag-compass/mag-compass.ac</code></li>
+<li>Oil Pressure &amp; Oil Temp: <code>Models/Interior/Panel/Instruments/oilpressure/oilpressure.ac</code>, <code>oiltemp/oiltemp.ac</code></li>
+<li>Radar / RSO Scope: <code>Models/Interior/Panel/Instruments/radar/radar.ac</code></li>
+<li>Dual Tachometer (<code>% RPM</code>): <code>Models/Interior/Panel/Instruments/rpm/rpm.ac</code></li>
+<li>Airspeed Indicator: <code>Models/Interior/Panel/Instruments/speed/speed.ac</code></li>
+<li><strong>Also Downloadable as <code>.glb</code>/<code>.gltf</code> on Sketchfab (<code>helijah</code>):</strong></li>
+<li><a href="https://sketchfab.com/3d-models/lockheed-sr-71-blackbird-1850c7bb7ac54902bd9868381ff8b652" target="_blank">https://sketchfab.com/3d-models/lockheed-sr-71-blackbird-1850c7bb7ac54902bd9868381ff8b652</a> (<code>69,135</code> faces, <code>42,423</code> verts, Free Standard Download).</li>
+</ul>
+<hr/>
+<h3>3. Downloadable J58 Engine &amp; Full Airframe Base Meshes (Sketchfab)</h3>
+<table><thead><tr><th>Model Name</th><th>Polycount</th><th>License &amp; Download</th><th>URL &amp; Best Use</th></tr></thead><tbody>
+<tr><td><strong>Pratt &amp; Whitney J58 Jet Engine</strong> (<code>amadeussvx</code>)</td><td><code>262,638</code> faces / <code>138,889</code> verts</td><td><strong>Downloadable</strong> (<code>CC BY-NC-SA</code>)</td><td><a href="https://sketchfab.com/3d-models/j58-jet-engine-bca3015516304cfabe249cfad5363939" target="_blank">https://sketchfab.com/3d-models/j58-jet-engine-bca3015516304cfabe249cfad5363939</a> <br/><strong>Thumb:</strong> <a href="https://media.sketchfab.com/models/bca3015516304cfabe249cfad5363939/thumbnails/dcc78a18d50e49b181d24f767ed5d2ac/34b5c769eb2a4761b70e890dc71c4095.jpeg" target="_blank">https://media.sketchfab.com/models/bca3015516304cfabe249cfad5363939/thumbnails/dcc78a18d50e49b181d24f767ed5d2ac/34b5c769eb2a4761b70e890dc71c4095.jpeg</a> <br/><em>High-poly standalone J58 turbojet + bypass tubes + afterburner—ideal starting reference for the internal engine bay!</em></td></tr>
+<tr><td><strong>SR-71 J58 Engine with Afterburner</strong> (<code>BSODGamer1234</code>)</td><td><code>1,120</code> faces / <code>566</code> verts</td><td><strong>Downloadable</strong> (<code>CC BY</code>)</td><td><a href="https://sketchfab.com/3d-models/sr-71-j58-engine-with-afterburner-8db0acd1e2624e168581887804801b2f" target="_blank">https://sketchfab.com/3d-models/sr-71-j58-engine-with-afterburner-8db0acd1e2624e168581887804801b2f</a> <br/><em>Lightweight blockout proxy for testing exploded-view translation tracks.</em></td></tr>
+<tr><td><strong>Lockheed SR-71 &quot;Blackbird&quot;</strong> (<code>ioai25312</code>)</td><td><code>49,063</code> faces / <code>26,524</code> verts</td><td><strong>Downloadable</strong> (<code>CC BY</code>)</td><td><a href="https://sketchfab.com/3d-models/lockheed-sr-71-blackbird-e2400e6119f5414c89e075654a82d30a" target="_blank">https://sketchfab.com/3d-models/lockheed-sr-71-blackbird-e2400e6119f5414c89e075654a82d30a</a> <br/><strong>Thumb:</strong> <a href="https://media.sketchfab.com/models/e2400e6119f5414c89e075654a82d30a/thumbnails/290b1991e28d4b6982e51582a704cfa6/09d501ec9b144497a600345467f350ec.jpeg" target="_blank">https://media.sketchfab.com/models/e2400e6119f5414c89e075654a82d30a/thumbnails/290b1991e28d4b6982e51582a704cfa6/09d501ec9b144497a600345467f350ec.jpeg</a> <br/><em>Clean mid-poly exterior airframe mesh.</em></td></tr>
+<tr><td><strong>Lockheed SR-71 Blackbird</strong> (<code>Spark_Customs</code>)</td><td><code>37,018</code> faces / <code>18,407</code> verts</td><td><strong>Downloadable</strong> (<code>CC BY</code>)</td><td><a href="https://sketchfab.com/3d-models/lockheed-sr-71-blackbird-9076a8fb5a4340a9b6e543a2e4728a9c" target="_blank">https://sketchfab.com/3d-models/lockheed-sr-71-blackbird-9076a8fb5a4340a9b6e543a2e4728a9c</a> <br/><strong>Thumb:</strong> <a href="https://media.sketchfab.com/models/9076a8fb5a4340a9b6e543a2e4728a9c/thumbnails/ea36941c652d4efb93b8327abf19d1e7/cc4a38f049c044029f08a9fa882e0cbc.jpeg" target="_blank">https://media.sketchfab.com/models/9076a8fb5a4340a9b6e543a2e4728a9c/thumbnails/ea36941c652d4efb93b8327abf19d1e7/cc4a38f049c044029f08a9fa882e0cbc.jpeg</a></td></tr>
+</tbody></table>
+<hr/>
+<h3>4. Inspectable Structural / Rib-Frame &amp; Cockpit Instrument 3D References</h3>
+<ul>
+<li><strong>Skeletal Blackbird (SR-71) — Structural Rib/Spar Visualization (<code>sy-kim</code>, <code>5.3M</code> tris):</strong></li>
+<li><strong>Graphite Edition:</strong> <a href="https://sketchfab.com/3d-models/skeletal-blackbirdsr-71-graphite-32a822fb0eab4cd6a73fc839a8cbe998" target="_blank">https://sketchfab.com/3d-models/skeletal-blackbirdsr-71-graphite-32a822fb0eab4cd6a73fc839a8cbe998</a></li>
+<li><strong>Skeleton Edition:</strong> <a href="https://sketchfab.com/3d-models/skeletal-blackbirdsr-71-skeleton-ac3ed6faf9094ead90dabe22aceba2b7" target="_blank">https://sketchfab.com/3d-models/skeletal-blackbirdsr-71-skeleton-ac3ed6faf9094ead90dabe22aceba2b7</a></li>
+<li><strong>Preview Image:</strong> <a href="https://media.sketchfab.com/models/ac3ed6faf9094ead90dabe22aceba2b7/thumbnails/7c17d4b20d5846d1a80e67805fc957d0/22448b0e473645398acd7732558e090b.jpeg" target="_blank">https://media.sketchfab.com/models/ac3ed6faf9094ead90dabe22aceba2b7/thumbnails/7c17d4b20d5846d1a80e67805fc957d0/22448b0e473645398acd7732558e090b.jpeg</a></li>
+<li><em>Note:</em> Artistic/structural skeletal rib-and-bulkhead interpretation inside the exact SR-71 silhouette—excellent visual inspiration for modeling internal titanium ring-frames and wing spars when outer skin panels lift away in the exploded view.</li>
+<li><strong>High-Detail Individual SR-71 Cockpit Controls &amp; Gauges (<code>Cesar.Ferrolho</code> — 3D WebGL Inspectable):</strong></li>
+<li><strong>SR-71 Flightstick (Control Stick Grip, Trim Hat &amp; Triggers):</strong> <a href="https://sketchfab.com/3d-models/sr-71-flightstick-448d8f5727af4f05b1017f6e6fb33587" target="_blank">https://sketchfab.com/3d-models/sr-71-flightstick-448d8f5727af4f05b1017f6e6fb33587</a> (<code>5,538</code> faces)</li>
+<li><strong>SR-71 Triple Display Indicator — KEAS / Mach / Altitude (<code>TDI</code> v2 with conversion chart):</strong> <a href="https://sketchfab.com/3d-models/sr-71-triple-display-indicator-second-version-da9d101f8c3844fe9da1f7cb5475e156" target="_blank">https://sketchfab.com/3d-models/sr-71-triple-display-indicator-second-version-da9d101f8c3844fe9da1f7cb5475e156</a> (<code>2,546</code> faces)</li>
+<li><strong>SR-71 Main Attitude Indicator (ADI):</strong> <a href="https://sketchfab.com/3d-models/sr-71-attitude-indicator-3f2883f756a24efc80eb984f6e7c0055" target="_blank">https://sketchfab.com/3d-models/sr-71-attitude-indicator-3f2883f756a24efc80eb984f6e7c0055</a> (<code>3,440</code> faces)</li>
+<li><strong>SR-71 Altimeter:</strong> <a href="https://sketchfab.com/3d-models/sr-71-altimeter-a548685b22e8446d9a8cb26ba341d3a7" target="_blank">https://sketchfab.com/3d-models/sr-71-altimeter-a548685b22e8446d9a8cb26ba341d3a7</a> (<code>1,900</code> faces)</li>
+<li><strong>SR-71 Instantaneous Vertical Speed Indicator (IVSI):</strong> <a href="https://sketchfab.com/3d-models/sr-71-ivsi-instrument-8ba481364e974877889d46d3c7235985" target="_blank">https://sketchfab.com/3d-models/sr-71-ivsi-instrument-8ba481364e974877889d46d3c7235985</a> (<code>1,585</code> faces)</li>
+<li><strong>High-Poly Exterior Airframe Topology Reference (<code>iliedom</code>, <code>300,116</code> faces):</strong></li>
+<li><a href="https://sketchfab.com/3d-models/lockheed-sr-71a-blackbird-e8888c4342bd40b3b95af3c6fcb0f963" target="_blank">https://sketchfab.com/3d-models/lockheed-sr-71a-blackbird-e8888c4342bd40b3b95af3c6fcb0f963</a></li>
+</ul>
     </section>
+  
+    <section id="03-photos" class="pack-section">
+      <div class="sec-header">
+        <h2>03. Exterior Multi-Angle Photos</h2>
+        <a class="raw-pill" href="./03-exterior-multi-angle-photos.md" target="_blank">Raw Markdown (03-exterior-multi-angle-photos.md)</a>
+      </div>
+      <h3>High-Resolution Walkaround, Orthographic-Style &amp; Detail Photography (Direct Image URLs)</h3>
+<p>All URLs below are direct, unauthenticated high-resolution (<code>2,000 px</code> to <code>7,500 px</code>) image files from the <strong>National Museum of the U.S. Air Force (<code>media.defense.gov</code> Public Domain)</strong>, <strong>NASA Dryden/Armstrong</strong>, and <strong>Wikimedia Commons</strong>.</p>
+<hr/>
+<h3>1. Front / Head-On &amp; Nose Chine Angles (Critical for Chine Cross-Section &amp; Nacelle Droop/Toe-In)</h3>
+<table><thead><tr><th>View / Detail</th><th>Resolution</th><th>Direct Image URL</th><th>Modeling Focus</th></tr></thead><tbody>
+<tr><td><strong>Pure Head-On Ramp View (NASA SR-71B at Plant 42 Palmdale)</strong></td><td><code>3000 × 2400</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/1/1c/This_photo_shows_a_head-on_view_of_NASA%27s_SR-71B_on_the_ramp_at_the_Air_Force%27s_Plant_42_in_Palmdale%2C_California%2C_shortly_before_delivery_to_DFRC_%28EC91-0365-7%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/1/1c/This_photo_shows_a_head-on_view_of_NASA%27s_SR-71B_on_the_ramp_at_the_Air_Force%27s_Plant_42_in_Palmdale%2C_California%2C_shortly_before_delivery_to_DFRC_%28EC91-0365-7%29.jpg</a></td><td>Ground-truth head-on cross-section of blended fuselage chines, outer wing conical camber droop, twin <code>15°</code> inward-canted rudders, and landing gear track (<code>5.08 m</code>).</td></tr>
+<tr><td><strong>Front-Quarter Close-Up (Udvar-Hazy NASM <code>61-7972</code>)</strong></td><td><code>3872 × 2592</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/2/21/NASM_-_SR-71_Blackbird_2.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/2/21/NASM_-_SR-71_Blackbird_2.jpg</a></td><td>Sharp cobra-hood chine edge, V-shaped quartz windscreen, pitot probe alignment, and twin inlet spike alignment relative to fuselage.</td></tr>
+<tr><td><strong>Nose Cone &amp; Forward Chine Profiles (PCAM Walkaround Set 1–4)</strong></td><td><code>2272 × 1704</code> (×4)</td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/a/ac/SR-71_PCAM_nose_1.JPG" target="_blank">https://upload.wikimedia.org/wikipedia/commons/a/ac/SR-71_PCAM_nose_1.JPG</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/b/b3/SR-71_PCAM_nose_2.JPG" target="_blank">https://upload.wikimedia.org/wikipedia/commons/b/b3/SR-71_PCAM_nose_2.JPG</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/0/03/SR-71_PCAM_nose_3.JPG" target="_blank">https://upload.wikimedia.org/wikipedia/commons/0/03/SR-71_PCAM_nose_3.JPG</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/4/42/SR-71_PCAM_nose_4.JPG" target="_blank">https://upload.wikimedia.org/wikipedia/commons/4/42/SR-71_PCAM_nose_4.JPG</a></td><td>Detachable nose radome seam (<code>FS 295</code>), chine curvature transition, pitot boom fairing, and forward optical/ELINT sensor bay panel lines.</td></tr>
+<tr><td><strong>USAF Museum Cold War Gallery Walkaround (<code>61-7976</code> — Front &amp; Quarter Angles)</strong></td><td>Full Original (<code>-1/-1</code>) &amp; <code>2000px</code></td><td>• <a href="https://media.defense.gov/2020/May/14/2002299669/2000/2000/0/200513-F-IO108-005.JPG" target="_blank">https://media.defense.gov/2020/May/14/2002299669/2000/2000/0/200513-F-IO108-005.JPG</a> (<a href="https://media.defense.gov/2020/May/14/2002299669/-1/-1/0/200513-F-IO108-005.JPG" target="_blank">Full Hi-Res</a>) <br/>• <a href="https://media.defense.gov/2020/May/14/2002299668/2000/2000/0/200513-F-IO108-004.JPG" target="_blank">https://media.defense.gov/2020/May/14/2002299668/2000/2000/0/200513-F-IO108-004.JPG</a> (<a href="https://media.defense.gov/2020/May/14/2002299668/-1/-1/0/200513-F-IO108-004.JPG" target="_blank">Full Hi-Res</a>) <br/>• <a href="https://media.defense.gov/2020/May/14/2002299667/2000/2000/0/200513-F-IO108-003.JPG" target="_blank">https://media.defense.gov/2020/May/14/2002299667/2000/2000/0/200513-F-IO108-003.JPG</a> (<a href="https://media.defense.gov/2020/May/14/2002299667/-1/-1/0/200513-F-IO108-003.JPG" target="_blank">Full Hi-Res</a>) <br/>• <a href="https://media.defense.gov/2020/May/14/2002299666/2000/2000/0/200513-F-IO108-002.JPG" target="_blank">https://media.defense.gov/2020/May/14/2002299666/2000/2000/0/200513-F-IO108-002.JPG</a> (<a href="https://media.defense.gov/2020/May/14/2002299666/-1/-1/0/200513-F-IO108-002.JPG" target="_blank">Full Hi-Res</a>)</td><td>High-clarity studio-lit museum walkaround angles showing matte iron-ball ferrite black paint sheen, red <code>&quot;NO STEP&quot;</code> wing walkways, and panel fastener patterns.</td></tr>
+</tbody></table>
+<hr/>
+<h3>2. Top / Dorsal Planform Views (Wing Corrugations, Red Walkways &amp; Refueling Receptacle)</h3>
+<table><thead><tr><th>View / Detail</th><th>Resolution</th><th>Direct Image URL</th><th>Modeling Focus</th></tr></thead><tbody>
+<tr><td><strong>Near-Vertical Overhead Planform in Flight (NASA <code>EC97-44295-84</code>)</strong></td><td><code>2100 × 2400</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/5/55/Linear_Aerospike_SR-71_Experiment_%28LASRE%29_first_flight_view_from_above_%28EC97-44295-84%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/5/55/Linear_Aerospike_SR-71_Experiment_%28LASRE%29_first_flight_view_from_above_%28EC97-44295-84%29.jpg</a></td><td>Crisp dorsal planform showing exact <code>60°</code> delta wing sweep, chordwise thermal expansion skin corrugations, red <code>&quot;NO STEP&quot;</code> demarcation boxes, and inboard/outboard elevon hinge lines. <em>(Ignore the experimental LASRE pod mounted on the dorsal spine when modeling baseline SR-71A).</em></td></tr>
+<tr><td><strong>High-Oblique Dorsal View in Flight (NASA <code>EC97-44295-51</code>)</strong></td><td><code>3039 × 2448</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/8/8c/Linear_Aerospike_SR-71_Experiment_%28LASRE%29_first_flight_view_from_above_%28EC97-44295-51%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/8/8c/Linear_Aerospike_SR-71_Experiment_%28LASRE%29_first_flight_view_from_above_%28EC97-44295-51%29.jpg</a></td><td>Upper nacelle bleed louver bands, nacelle-to-wing fillet geometry, and forward dorsal spine refueling receptacle position.</td></tr>
+<tr><td><strong>3/4 High-Altitude Banking Dorsal View (NASA <code>831</code> Over Sierra Nevada)</strong></td><td><code>5100 × 3996</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/9/97/Lockheed_SR-71_Blackbird.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/9/97/Lockheed_SR-71_Blackbird.jpg</a></td><td>Ultra-sharp <code>20 MP</code> dorsal lighting across the wing corrugations, composite sawtooth chine/trailing-edge pie-slices, and dorsal ANS star-tracker window.</td></tr>
+<tr><td><strong>Dorsal Aerial Refueling Alignment View (<code>DVIDS693705</code>)</strong></td><td><code>3039 × 2438</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/9/9e/Linear_Aerospike_SR-71_Experiment_%28LASRE%29_refueling_during_first_flight_DVIDS693705.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/9/9e/Linear_Aerospike_SR-71_Experiment_%28LASRE%29_refueling_during_first_flight_DVIDS693705.jpg</a></td><td>Open dorsal in-flight refueling receptacle door (<code>FS 715</code> region) behind the RSO canopy.</td></tr>
+</tbody></table>
+<hr/>
+<h3>3. Side Profiles, 3/4 Walkarounds &amp; Underside / Landing Gear Details</h3>
+<table><thead><tr><th>View / Detail</th><th>Resolution</th><th>Direct Image URL</th><th>Modeling Focus</th></tr></thead><tbody>
+<tr><td><strong>Side-Quarter Landing Profile with Drag Chute (<code>GPN-2000-001944</code>)</strong></td><td><code>5100 × 4000</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/4/4a/SR-71_Landing_with_Drag_Chute_-_GPN-2000-001944.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/4/4a/SR-71_Landing_with_Drag_Chute_-_GPN-2000-001944.jpg</a></td><td>Full side-profile ground-clearance stance, main &amp; nose landing gear extension geometry, open dorsal drag-chute doors at aft tailcone, and nose-high pitch attitude.</td></tr>
+<tr><td><strong>Edwards AFB Ramp Side Profiles (<code>61-7971</code> Set)</strong></td><td><code>1600 × 1067</code> (×3)</td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/5/54/Lockheed_SR-71A_61-7971%2C_Edwards_AFB%2C_CA_Oct96_%2852302789562%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/5/54/Lockheed_SR-71A_61-7971%2C_Edwards_AFB%2C_CA_Oct96_%2852302789562%29.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/5/56/Lockheed_SR-71A_61-7971%2C_Edwards_AFB%2C_CA_Oct96_%2852303785508%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/5/56/Lockheed_SR-71A_61-7971%2C_Edwards_AFB%2C_CA_Oct96_%2852303785508%29.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/f/f9/Lockheed_SR-71A_61-7971%2C_Edwards_AFB%2C_CA_Oct96_%2852303785818%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/f/f9/Lockheed_SR-71A_61-7971%2C_Edwards_AFB%2C_CA_Oct96_%2852303785818%29.jpg</a></td><td>Clean unmodified baseline SR-71A dorsal spine (no LASRE pod), standard USAF/NASA tailfin proportions, and nacelle side profile.</td></tr>
+<tr><td><strong>Left Engine Translating Inlet Spike Close-Up</strong></td><td><code>5184 × 3456</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/b/bc/Lockheed_SR-71_left_engine_spike_%286586704831%29_%285%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/b/bc/Lockheed_SR-71_left_engine_spike_%286586704831%29_%285%29.jpg</a></td><td><code>18 MP</code> macro reference of the conical translating spike, boundary-layer bleed slot perforations around the cone mid-body, and sharp cowl lip.</td></tr>
+<tr><td><strong>Main Landing Gear Strut, 3-Wheel Bogie &amp; Bay Doors (IWM Duxford)</strong></td><td><code>3000 × 4000</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/b/b5/Lockheed_SR-71_Blackbird_-_Landing_Gear_%284889948402%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/b/b5/Lockheed_SR-71_Blackbird_-_Landing_Gear_%284889948402%29.jpg</a></td><td>Main oleo strut, torque links, hydraulic brake lines, inward-retracting gear doors, and 3-wheel bogie layout.</td></tr>
+<tr><td><strong>Aluminum-Impregnated Silver Main Tires Close-Up (Evergreen <code>61-7971</code>)</strong></td><td><code>5023 × 3413</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/1/1f/Tires_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01031.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/1/1f/Tires_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01031.jpg</a></td><td>Signature <strong>metallic silver B.F. Goodrich <code>22-ply</code> aluminum-powder-impregnated tires</strong> (nitrogen-inflated to <code>415 psi</code> to reflect heat inside the wheel wells).</td></tr>
+<tr><td><strong>Belly, Nose Gear, Crew Entry Door &amp; Engine Underside (<code>Udvar-Hazy</code>)</strong></td><td><code>6000 × 4000</code> (×2)</td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/e/ea/SR-71_Landing_Gear_and_Entry_Door_%2849071408071%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/e/ea/SR-71_Landing_Gear_and_Entry_Door_%2849071408071%29.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/2/24/SR-71_engine_and_landing_gear_%2849007575312%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/2/24/SR-71_engine_and_landing_gear_%2849007575312%29.jpg</a></td><td><code>24 MP</code> underside views showing ventral belly skin, twin-wheel nose gear strut, belly camera bay doors, and lower nacelle suck-in / bypass doors.</td></tr>
+<tr><td><strong>USAF Museum Additional Exterior Detail Walkaround (<code>61-7976</code> Series)</strong></td><td><code>4000px</code>+</td><td>• <a href="https://media.defense.gov/2020/Feb/05/2002244432/2000/2000/0/200205-F-IO108-016.JPG" target="_blank">https://media.defense.gov/2020/Feb/05/2002244432/2000/2000/0/200205-F-IO108-016.JPG</a> (<a href="https://media.defense.gov/2020/Feb/05/2002244432/-1/-1/0/200205-F-IO108-016.JPG" target="_blank">Full Hi-Res</a>) <br/>• <a href="https://media.defense.gov/2020/Feb/05/2002244434/2000/2000/0/200205-F-IO108-018.JPG" target="_blank">https://media.defense.gov/2020/Feb/05/2002244434/2000/2000/0/200205-F-IO108-018.JPG</a> (<a href="https://media.defense.gov/2020/Feb/05/2002244434/-1/-1/0/200205-F-IO108-018.JPG" target="_blank">Full Hi-Res</a>) <br/>• <a href="https://media.defense.gov/2020/Feb/05/2002244435/2000/2000/0/200205-F-IO108-012.JPG" target="_blank">https://media.defense.gov/2020/Feb/05/2002244435/2000/2000/0/200205-F-IO108-012.JPG</a> (<a href="https://media.defense.gov/2020/Feb/05/2002244435/-1/-1/0/200205-F-IO108-012.JPG" target="_blank">Full Hi-Res</a>) <br/>• <a href="https://media.defense.gov/2020/Feb/05/2002244436/2000/2000/0/200205-F-IO108-013.JPG" target="_blank">https://media.defense.gov/2020/Feb/05/2002244436/2000/2000/0/200205-F-IO108-013.JPG</a> (<a href="https://media.defense.gov/2020/Feb/05/2002244436/-1/-1/0/200205-F-IO108-013.JPG" target="_blank">Full Hi-Res</a>)</td><td>Close-up fuselage/wing/nacelle junctions and surface markings on USAF <code>61-7976</code>.</td></tr>
+</tbody></table>
+<hr/>
+<h3>4. Rear / Aft Tailcone, Elevons &amp; Blow-In Door Ejector Nozzles</h3>
+<table><thead><tr><th>View / Detail</th><th>Resolution</th><th>Direct Image URL</th><th>Modeling Focus</th></tr></thead><tbody>
+<tr><td><strong>Rear Exhaust Nozzle Exterior &amp; Turkey-Feather Flaps (<code>Dayton</code>)</strong></td><td><code>3384 × 2511</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/2/2a/Lockheed_SR-71_jet_exhaust_detail%2C_National_Museum_of_the_US_Air_Force%2C_Dayton%2C_Ohio%2C_USA._%2831485223097%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/2/2a/Lockheed_SR-71_jet_exhaust_detail%2C_National_Museum_of_the_US_Air_Force%2C_Dayton%2C_Ohio%2C_USA._%2831485223097%29.jpg</a></td><td>Free-floating blow-in door ring around the aft nacelle and segmented variable-area ejector nozzle leaves.</td></tr>
+<tr><td><strong>Internal Afterburner Flameholder &amp; Nozzle Interior</strong></td><td><code>2700 × 1800</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/b/bc/Blackbird_SR-71_engine_nozzle.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/b/bc/Blackbird_SR-71_engine_nozzle.jpg</a></td><td>Concentric flameholder rings, corrugated ceramic-coated afterburner liner, and actuator petals inside the J58 tailpipe.</td></tr>
+<tr><td><strong>Rear Fuselage Boat-Tail &amp; Twin Exhaust Alignment (<code>NASA 844</code>)</strong></td><td><code>2000 × 1577</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/f/fc/SR-71_LASRE.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/f/fc/SR-71_LASRE.jpg</a></td><td>Aft fuselage beaver-tail termination between inboard elevons, outboard elevon droop/up-rigging, and rudder root fairings.</td></tr>
+<tr><td><strong>Twin Afterburner Shock Diamonds at Takeoff (<code>NASA 831</code>)</strong></td><td><code>3030 × 2416</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/6/62/SR-71_Takeoff_with_Afterburner_Showing_Shock_Diamonds_in_Exhaust.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/6/62/SR-71_Takeoff_with_Afterburner_Showing_Shock_Diamonds_in_Exhaust.jpg</a></td><td>Reference for optional volumetric exhaust / Mach shock-diamond shader (<code>7–9</code> glowing shock rings per plume).</td></tr>
+</tbody></table>
+    </section>
+  
+    <section id="04-cockpits" class="pack-section">
+      <div class="sec-header">
+        <h2>04. Pilot &amp; RSO Cockpits + 360° Tours</h2>
+        <a class="raw-pill" href="./04-cockpit-pilot-and-rso.md" target="_blank">Raw Markdown (04-cockpit-pilot-and-rso.md)</a>
+      </div>
+      <h3>Complete Interior Reference for Forward Pilot Station &amp; Aft RSO Station</h3>
+<hr/>
+<h3>1. Interactive 360° Spherical Cockpit Panoramas (Every Switch, Sidewall &amp; Overhead)</h3>
+<p>Hosted by the <strong>National Museum of the U.S. Air Force</strong> (from SR-71A S/N <code>61-7976</code> in Dayton, OH):</p>
+<ul>
+<li><strong>SR-71A Forward Cockpit (Pilot) — 360° Interactive Panorama:</strong></li>
+<li><a href="http://www.nmusafvirtualtour.com/media/068/SR-71A%20Front%20Cockpit.html" target="_blank">http://www.nmusafvirtualtour.com/media/068/SR-71A%20Front%20Cockpit.html</a></li>
+<li><strong>SR-71A Rear Cockpit (Reconnaissance Systems Officer / RSO) — 360° Interactive Panorama:</strong></li>
+<li><a href="http://www.nmusafvirtualtour.com/media/068/SR-71A%20Rear%20Cockpit.html" target="_blank">http://www.nmusafvirtualtour.com/media/068/SR-71A%20Rear%20Cockpit.html</a></li>
+<li><strong>Cold War Gallery Cockpit Virtual Tour Hub:</strong></li>
+<li><a href="https://www.nmusafvirtualtour.com/cockpits/CW_tour/CW-cockpits.html" target="_blank">https://www.nmusafvirtualtour.com/cockpits/CW_tour/CW-cockpits.html</a></li>
+</ul>
+<hr/>
+<h3>2. Declassified USAF SR-71A-1 Flight Manual (Direct Full PDFs — Cockpit Diagrams)</h3>
+<p>All official instrument panel callouts, throttle/spike control quadrants, ejection seat diagrams, and warning annunciator matrices are in *<em>Section 1 (</em>Description and Operation<em>)</em>* of <code>T.O. 1SR-71A-1</code>:</p>
+<ul>
+<li><strong>Part 1 PDF (Section 1: Airframe, Pilot &amp; RSO Cockpit Layouts, J58 Propulsion, Fuel &amp; Hydraulics — <code>37.4 MB</code>):</strong></li>
+<li><a href="https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01.pdf" target="_blank">https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01.pdf</a></li>
+<li><em>(OCR Searchable Text Version)</em>: <a href="https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_text.pdf" target="_blank">https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_text.pdf</a></li>
+<li><strong>Part 2 PDF (Normal &amp; Emergency Operating Procedures — <code>33.6 MB</code>):</strong></li>
+<li><a href="https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__02.pdf" target="_blank">https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__02.pdf</a></li>
+<li><strong>Part 3 PDF (Section 4 Auxiliary Equipment, ANS Star Tracker, Operating Limitations &amp; Performance Charts — <code>38.8 MB</code>):</strong></li>
+<li><a href="https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__03.pdf" target="_blank">https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__03.pdf</a></li>
+<li><strong>Wayback Mirror of HTML-Indexed Flight Manual (<code>sr-71.org</code>):</strong></li>
+<li>Section Index: <a href="http://web.archive.org/web/20250609042831/https://www.sr-71.org/blackbird/manual/" target="_blank">http://web.archive.org/web/20250609042831/https://www.sr-71.org/blackbird/manual/</a></li>
+<li>Section 1 Illustrated Pages: <a href="http://web.archive.org/web/20250605061546/https://www.sr-71.org/blackbird/manual/1/" target="_blank">http://web.archive.org/web/20250605061546/https://www.sr-71.org/blackbird/manual/1/</a></li>
+</ul>
+<hr/>
+<h3>3. High-Resolution Forward Cockpit (Pilot) Photos — Direct Image URLs</h3>
+<table><thead><tr><th>Subject / Angle</th><th>Source &amp; Resolution</th><th>Direct Image URL</th></tr></thead><tbody>
+<tr><td><strong>Forward Cockpit Main Instrument Panel — Straight-On Wide</strong></td><td>USAF Museum (<code>Hi-Res Original</code> / <code>2000px</code>)</td><td>• Web <code>2000px</code>: <a href="https://media.defense.gov/2007/Jan/16/2000521412/2000/2000/0/070116-F-1234S-013.JPG" target="_blank">https://media.defense.gov/2007/Jan/16/2000521412/2000/2000/0/070116-F-1234S-013.JPG</a> <br/>• Full Original: <a href="https://media.defense.gov/2007/Jan/16/2000521412/-1/-1/0/070116-F-1234S-013.JPG" target="_blank">https://media.defense.gov/2007/Jan/16/2000521412/-1/-1/0/070116-F-1234S-013.JPG</a></td></tr>
+<tr><td><strong>Forward Cockpit Left Console, Throttles &amp; Inlet Spike Controls</strong></td><td>USAF Museum (<code>Hi-Res Original</code> / <code>2000px</code>)</td><td>• Web <code>2000px</code>: <a href="https://media.defense.gov/2010/May/10/2000521423/2000/2000/0/070116-F-1234S-010.JPG" target="_blank">https://media.defense.gov/2010/May/10/2000521423/2000/2000/0/070116-F-1234S-010.JPG</a> <br/>• Full Original: <a href="https://media.defense.gov/2010/May/10/2000521423/-1/-1/0/070116-F-1234S-010.JPG" target="_blank">https://media.defense.gov/2010/May/10/2000521423/-1/-1/0/070116-F-1234S-010.JPG</a></td></tr>
+<tr><td><strong>Forward Cockpit Center Pedestal, ADI, HSI, TDI &amp; Control Stick</strong></td><td>USAF Museum (<code>Hi-Res Original</code> / <code>2000px</code>)</td><td>• Web <code>2000px</code>: <a href="https://media.defense.gov/2007/Jan/16/2000521421/2000/2000/0/070116-F-1234S-011.JPG" target="_blank">https://media.defense.gov/2007/Jan/16/2000521421/2000/2000/0/070116-F-1234S-011.JPG</a> <br/>• Full Original: <a href="https://media.defense.gov/2007/Jan/16/2000521421/-1/-1/0/070116-F-1234S-011.JPG" target="_blank">https://media.defense.gov/2007/Jan/16/2000521421/-1/-1/0/070116-F-1234S-011.JPG</a></td></tr>
+<tr><td><strong>Forward Cockpit Right Console, Fuel Bleed/CG Panel &amp; Caution Matrix</strong></td><td>USAF Museum (<code>Hi-Res Original</code> / <code>2000px</code>)</td><td>• Web <code>2000px</code>: <a href="https://media.defense.gov/2007/Jan/16/2000521414/2000/2000/0/070116-F-1234S-012.JPG" target="_blank">https://media.defense.gov/2007/Jan/16/2000521414/2000/2000/0/070116-F-1234S-012.JPG</a> <br/>• Full Original: <a href="https://media.defense.gov/2007/Jan/16/2000521414/-1/-1/0/070116-F-1234S-012.JPG" target="_blank">https://media.defense.gov/2007/Jan/16/2000521414/-1/-1/0/070116-F-1234S-012.JPG</a></td></tr>
+<tr><td><strong>2020 Studio Detail Series — Forward Cockpit Panels &amp; Canopy Sill (<code>5</code> angles)</strong></td><td>USAF Museum (<code>2000px</code> + <code>-1/-1</code> Originals)</td><td>• <a href="https://media.defense.gov/2020/Feb/25/2002254553/2000/2000/0/200225-F-IO108-011.JPG" target="_blank">https://media.defense.gov/2020/Feb/25/2002254553/2000/2000/0/200225-F-IO108-011.JPG</a> (<a href="https://media.defense.gov/2020/Feb/25/2002254553/-1/-1/0/200225-F-IO108-011.JPG" target="_blank">Original</a>) <br/>• <a href="https://media.defense.gov/2020/Feb/25/2002254552/2000/2000/0/200225-F-IO108-012.JPG" target="_blank">https://media.defense.gov/2020/Feb/25/2002254552/2000/2000/0/200225-F-IO108-012.JPG</a> (<a href="https://media.defense.gov/2020/Feb/25/2002254552/-1/-1/0/200225-F-IO108-012.JPG" target="_blank">Original</a>) <br/>• <a href="https://media.defense.gov/2020/Feb/25/2002254563/2000/2000/0/200225-F-IO108-013.JPG" target="_blank">https://media.defense.gov/2020/Feb/25/2002254563/2000/2000/0/200225-F-IO108-013.JPG</a> (<a href="https://media.defense.gov/2020/Feb/25/2002254563/-1/-1/0/200225-F-IO108-013.JPG" target="_blank">Original</a>) <br/>• <a href="https://media.defense.gov/2020/Feb/25/2002254562/2000/2000/0/200225-F-IO108-014.JPG" target="_blank">https://media.defense.gov/2020/Feb/25/2002254562/2000/2000/0/200225-F-IO108-014.JPG</a> (<a href="https://media.defense.gov/2020/Feb/25/2002254562/-1/-1/0/200225-F-IO108-014.JPG" target="_blank">Original</a>) <br/>• <a href="https://media.defense.gov/2020/Feb/25/2002254561/2000/2000/0/200225-F-IO108-015.JPG" target="_blank">https://media.defense.gov/2020/Feb/25/2002254561/2000/2000/0/200225-F-IO108-015.JPG</a> (<a href="https://media.defense.gov/2020/Feb/25/2002254561/-1/-1/0/200225-F-IO108-015.JPG" target="_blank">Original</a>)</td></tr>
+<tr><td><strong>Pilot Cockpit Instruments, Control Stick &amp; Lockheed/Weber Ejection Seat (Fill-Flash Color Reference)</strong></td><td>Wikimedia (<code>2408 × 3496</code> &amp; <code>3483 × 2368</code>)</td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/2/25/SR-71_Pilots_cockpit%2C_instruments%2C_stick%2C_ejection_seat_%284527966172%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/2/25/SR-71_Pilots_cockpit%2C_instruments%2C_stick%2C_ejection_seat_%284527966172%29.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/f/f1/SR-71_Pilots_cockpit%2C_canopy%2C_windscreen_ejection_seat_%284527969004%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/f/f1/SR-71_Pilots_cockpit%2C_canopy%2C_windscreen_ejection_seat_%284527969004%29.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/4/4a/Vertical_SR-71_Pilots_cockpit%2C_instruments%2C_stick%2C_ejection_seat_%284527969868%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/4/4a/Vertical_SR-71_Pilots_cockpit%2C_instruments%2C_stick%2C_ejection_seat_%284527969868%29.jpg</a></td></tr>
+<tr><td><strong>Clamshell V-Windscreen &amp; Quartz Thermal Glass Exterior (<code>Udvar-Hazy</code>, <code>6000 × 4000</code>)</strong></td><td>Wikimedia (<code>24 MP</code>)</td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/0/06/SR-71_Blackbird_Cockpit_Windows_%2848906494182%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/0/06/SR-71_Blackbird_Cockpit_Windows_%2848906494182%29.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/6/62/SR-71_Cockpit_%2848927333707%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/6/62/SR-71_Cockpit_%2848927333707%29.jpg</a></td></tr>
+<tr><td><strong>Link SR-71 Full Cockpit Simulator Panels (<code>6000 × 4000</code>, Unobstructed Wide Angle)</strong></td><td>Wikimedia (<code>24 MP</code>)</td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/2/2e/Frontiers_of_Flight_Museum_December_2015_130_%28Link_SR-71_simulator%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/2/2e/Frontiers_of_Flight_Museum_December_2015_130_%28Link_SR-71_simulator%29.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/0/09/Frontiers_of_Flight_Museum_December_2015_131_%28Link_SR-71_simulator%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/0/09/Frontiers_of_Flight_Museum_December_2015_131_%28Link_SR-71_simulator%29.jpg</a></td></tr>
+<tr><td><strong>Center-of-Gravity (<code>% MAC</code>) Indicator Gauge Hardware (<code>7974</code>)</strong></td><td>Wikimedia (<code>2688 × 1520</code>)</td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/3/31/Center_of_gravity_indicator_SR_71_II_ID_7974.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/3/31/Center_of_gravity_indicator_SR_71_II_ID_7974.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/2/2e/Center_of_gravity_indicator_side_SR_71_ID_7974.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/2/2e/Center_of_gravity_indicator_side_SR_71_ID_7974.jpg</a></td></tr>
+</tbody></table>
+<hr/>
+<h3>4. High-Resolution Rear Cockpit (RSO Station) Photos — Direct Image URLs</h3>
+<table><thead><tr><th>Subject / Angle</th><th>Source &amp; Resolution</th><th>Direct Image URL</th></tr></thead><tbody>
+<tr><td><strong>RSO Rear Cockpit Instrument Panel, Radar/Navigation Viewfinder &amp; Consoles</strong></td><td>USAF Museum (<code>Hi-Res Original</code> / <code>2000px</code>)</td><td>• Angle 1 (<code>2000px</code>): <a href="https://media.defense.gov/2020/Feb/25/2002254473/2000/2000/0/200225-F-IO108-001.JPG" target="_blank">https://media.defense.gov/2020/Feb/25/2002254473/2000/2000/0/200225-F-IO108-001.JPG</a> (<a href="https://media.defense.gov/2020/Feb/25/2002254473/-1/-1/0/200225-F-IO108-001.JPG" target="_blank">Original</a>) <br/>• Angle 2 (<code>2000px</code>): <a href="https://media.defense.gov/2020/Feb/25/2002254558/2000/2000/0/200225-F-IO108-017.JPG" target="_blank">https://media.defense.gov/2020/Feb/25/2002254558/2000/2000/0/200225-F-IO108-017.JPG</a> (<a href="https://media.defense.gov/2020/Feb/25/2002254558/-1/-1/0/200225-F-IO108-017.JPG" target="_blank">Original</a>)</td></tr>
+<tr><td><strong>RSO Cockpit Ejection Seat, Canopy Actuator &amp; Side Consoles (<code>Fill-Flash</code>)</strong></td><td>Wikimedia (<code>3502 × 2398</code> &amp; <code>3514 × 2390</code>)</td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/b/bb/SR-71_Systems_operators_cockpit%2C_controls%2C_instruments%2C_ejection_seat_%284527964406%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/b/bb/SR-71_Systems_operators_cockpit%2C_controls%2C_instruments%2C_ejection_seat_%284527964406%29.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/c/c2/SR-71_Systems_operators_cockpit%2C_canopy%2C_ejection_seat_%284527967934%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/c/c2/SR-71_Systems_operators_cockpit%2C_canopy%2C_ejection_seat_%284527967934%29.jpg</a></td></tr>
+<tr><td><strong>In-Flight Full Pressure Suit (<code>David Clark S1030</code>) Cockpit Ergonomics (Maj. Brian Shul)</strong></td><td>Wikimedia (<code>4213 × 2810</code>)</td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/6/63/Brian_Shul%2C_self-portrait%2C_SR-71_Blackbird.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/6/63/Brian_Shul%2C_self-portrait%2C_SR-71_Blackbird.jpg</a></td></tr>
+</tbody></table>
+<hr/>
+<h3>5. Cockpit Modeling &amp; Color/Material Guide for Blender</h3>
+<ul>
+<li><strong>Interior Structural Color:</strong> Dark neutral gray (<code>FS 36231</code> Dark Gull Gray) tub bulkheads and canopy frames, contrasted against <strong>matte black (<code>FS 37038</code>)</strong> instrument bezels and sub-panels.</li>
+<li><strong>Ejection Seats (Lockheed C-2 / Weber SR-1 Zero-Zero):</strong> Gloss/semi-gloss black structural frame, <strong>bright orange-red cushions and headrest</strong>, silver/steel harness hardware, yellow-and-black striped D-ring ejection pull handle between the knees, and <strong>zinc-chromate gold hydraulic canopy actuator cylinder</strong> behind the seat.</li>
+<li><strong>Signature SR-71 Instruments to Feature in Close-Up Camera Moves:</strong></li>
+<li><strong>Triple Display Indicator (TDI):</strong> Digital drum counter + analog strip top-left of center panel showing <code>KEAS</code>, <code>Mach</code> (past <code>3.2+</code>), and <code>Altitude</code> (past <code>85,000 ft</code>).</li>
+<li><strong>Inlet Spike &amp; Forward Bypass Position Indicators:</strong> Dual-needle gauges monitoring left/right spike translation (<code>26 in</code> travel) and shockwave duct pressure ratio (<code>unstart</code> prevention).</li>
+<li><strong>Periscope / Optical Viewfinder:</strong> Center-top of Pilot&#x27;s glare shield (gives rearward/horizon view) and center of RSO&#x27;s panel (optical navigation/sensor tracking).</li>
+<li><strong>Master Caution Matrix:</strong> Large illuminated amber/red grid on the right forward panel (infamous for requiring two hands to press reset).</li>
+</ul>
+    </section>
+  
+    <section id="05-inner-workings" class="pack-section">
+      <div class="sec-header">
+        <h2>05. Inner Workings, J58 Cutaways &amp; Exploded Rig</h2>
+        <a class="raw-pill" href="./05-inner-workings-cutaways-exploded-rig.md" target="_blank">Raw Markdown (05-inner-workings-cutaways-exploded-rig.md)</a>
+      </div>
+      <h3>Complete Subsystem Reference &amp; Blender Collection Hierarchy for Blow-Up Visualizations</h3>
+<div class="callout"><strong>Core Design Goal:</strong> Enable an interactive or keyframed <strong>&quot;exploded cutaway&quot;</strong> in Blender where outer titanium/composite skins, canopies, nose radome, and nacelle cowlings separate cleanly along local axes to reveal the internal <strong>Pratt &amp; Whitney J58 turboramjets</strong>, <strong>6 external bleed-bypass ducts</strong>, <strong>translating inlet spike actuator</strong>, <strong>6 fuselage JP-7 heat-sink fuel tanks</strong>, <strong>Nortronics ANS star-tracker</strong>, and <strong>reconnaissance camera/radar bays</strong>.</div>
+<hr/>
+<h3>1. Cutaways, Airflow Schematics &amp; Internal Arrangement Diagrams</h3>
+<table><thead><tr><th>Diagram / Technical Cutaway</th><th>Format &amp; Resolution</th><th>Direct URL</th></tr></thead><tbody>
+<tr><td><strong>Pratt &amp; Whitney J58 Internal Nacelle &amp; Airflow Cutaway (<code>Mach 0</code> → <code>Mach 3.2</code>)</strong> <em>(Vectorized from <code>SR-71A-1</code> Fig. 1-21)</em></td><td>Infinite SVG (<code>850 × 1050</code>)</td><td><a href="https://upload.wikimedia.org/wikipedia/commons/8/89/SR71_J58_Engine_Airflow_Patterns.svg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/8/89/SR71_J58_Engine_Airflow_Patterns.svg</a></td></tr>
+<tr><td><strong>J58 Internal Cross-Section &amp; Shockwave Trap at Mach 3.0</strong> <em>(Flight Manual Excerpt)</em></td><td>PNG (<code>842 × 230</code>)</td><td><a href="https://upload.wikimedia.org/wikipedia/commons/1/1b/J58_airflow_at_Mach_3.png" target="_blank">https://upload.wikimedia.org/wikipedia/commons/1/1b/J58_airflow_at_Mach_3.png</a></td></tr>
+<tr><td><strong>J58 / Nacelle Multi-Stage Airflow &amp; Bypass Schematic (<code>SR71J58.png</code>)</strong></td><td>PNG (<code>1000 × 1400</code>)</td><td><a href="https://upload.wikimedia.org/wikipedia/commons/0/02/SR71J58.png" target="_blank">https://upload.wikimedia.org/wikipedia/commons/0/02/SR71J58.png</a></td></tr>
+<tr><td><strong>SR-71 Titanium vs. Composite Structural Material Map (<code>Sr-71-composit.gif</code>)</strong></td><td>GIF (<code>1000 × 801</code>)</td><td><a href="https://upload.wikimedia.org/wikipedia/commons/8/85/Sr-71-composit.gif" target="_blank">https://upload.wikimedia.org/wikipedia/commons/8/85/Sr-71-composit.gif</a></td></tr>
+<tr><td><strong>Declassified <code>T.O. 1SR-71A-1</code> Flight Manual — Part 1 (Fuel Tank Arrangement Fig. 1-4, Inlet Spike Fig. 1-7, Hydraulic &amp; Electrical Cutaways)</strong></td><td>Searchable PDF (<code>36.1 MB</code>)</td><td><a href="https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_text.pdf" target="_blank">https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_text.pdf</a></td></tr>
+<tr><td><strong>Declassified <code>T.O. 1SR-71A-1</code> Flight Manual — Part 3 (Section 4: ANS Astro-Inertial Star-Tracker &amp; Environmental Cooling Schematics)</strong></td><td>Searchable PDF (<code>37.3 MB</code>)</td><td><a href="https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__03_text.pdf" target="_blank">https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__03_text.pdf</a></td></tr>
+<tr><td><strong>Leland Haynes SR-71 Schematics &amp; Skunk Works Executive Handbook Cutaways (Wayback Mirror)</strong></td><td>HTML + <code>13</code> Schematics</td><td><a href="http://web.archive.org/web/20260208145315/http://www.wvi.com/%7Esr71webmaster/schematic.html" target="_blank">http://web.archive.org/web/20260208145315/http://www.wvi.com/%7Esr71webmaster/schematic.html</a></td></tr>
+</tbody></table>
+<hr/>
+<h3>2. Pratt &amp; Whitney J58 (<code>JT11D-20</code>) Bare Engine Hardware Reference Photos (360° Plumbing &amp; Bypass Tubes)</h3>
+<p>When the SR-71&#x27;s nacelle cowlings separate in an exploded view, the <strong>J58 engine</strong> is the centerpiece mechanical sculpture:</p>
+<ul>
+<li><strong>9-stage axial compressor</strong> with <strong>6 massive external bleed-bypass pipes</strong> curving from the <strong>4th compressor stage</strong> around the outside of the combustion section directly into the <strong>afterburner diffuser</strong> (at <code>Mach 3.2</code>, ~<code>20%</code> of compressor air bypasses the core turbine to burn directly in the afterburner like a ramjet, while the inlet itself provides ~<code>54%</code> of total thrust via pressure recovery).</li>
+<li><strong>Dimensions &amp; Weight:</strong> Length <code>180 in</code> (<code>4.57 m</code>), max diameter <code>50 in</code> (<code>1.27 m</code>), dry weight ~<code>6,000 lb</code> (<code>2,722 kg</code>), sea-level static thrust <code>32,500 lbf</code> (<code>144.6 kN</code>) with afterburner, fueled by low-volatility <strong>JP-7</strong> ignited chemically with <strong>Triethylborane (TEB)</strong>.</li>
+</ul>
+<table><thead><tr><th>Hardware View</th><th>Resolution</th><th>Direct Image URL</th></tr></thead><tbody>
+<tr><td><strong>Bare J58 Engine — Full Side View Showing 6 External Bleed-Bypass Pipes (<code>Intrepid</code>, <code>32 MP</code>)</strong></td><td><code>6960 × 4640</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/3/38/At_the_Intrepid_Museum_2023_122.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/3/38/At_the_Intrepid_Museum_2023_122.jpg</a></td></tr>
+<tr><td><strong>Bare J58 Engine Moving / Rigging Views — USAF Museum Cold War Gallery (<code>2</code> angles)</strong></td><td>Full Original (<code>-1/-1</code>) &amp; <code>2000px</code></td><td>• <a href="https://media.defense.gov/2020/May/14/2002300185/2000/2000/0/200513-F-IO108-045.JPG" target="_blank">https://media.defense.gov/2020/May/14/2002300185/2000/2000/0/200513-F-IO108-045.JPG</a> (<a href="https://media.defense.gov/2020/May/14/2002300185/-1/-1/0/200513-F-IO108-045.JPG" target="_blank">Original</a>) <br/>• <a href="https://media.defense.gov/2020/May/14/2002300187/2000/2000/0/200513-F-IO108-047.JPG" target="_blank">https://media.defense.gov/2020/May/14/2002300187/2000/2000/0/200513-F-IO108-047.JPG</a> (<a href="https://media.defense.gov/2020/May/14/2002300187/-1/-1/0/200513-F-IO108-047.JPG" target="_blank">Original</a>)</td></tr>
+<tr><td><strong>Bare J58 Engine — 3/4 Front &amp; Compressor Bleed Valves (<code>4500 × 3003</code>)</strong></td><td><code>4500 × 3003</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/c/cd/18-15-112-J58.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/c/cd/18-15-112-J58.jpg</a></td></tr>
+<tr><td><strong>Bare J58 Engine — Side Plumbing, Fuel Manifold &amp; Afterburner Can (<code>4205 × 2798</code>)</strong></td><td><code>4205 × 2798</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/6/6d/SR-71_Engine_%2817473380699%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/6/6d/SR-71_Engine_%2817473380699%29.jpg</a></td></tr>
+<tr><td><strong>Bare J58 Engine — Aerospace Museum of California (<code>3</code> angles)</strong></td><td><code>3456 × 2304</code> (×3)</td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/2/23/J-58_Engine_for_an_SR-71_Blackbird.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/2/23/J-58_Engine_for_an_SR-71_Blackbird.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/6/65/J-58_Engine.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/6/65/J-58_Engine.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/4/40/J-58_in_the_Aerospace_Museum_of_California.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/4/40/J-58_in_the_Aerospace_Museum_of_California.jpg</a></td></tr>
+<tr><td><strong>Bare J58 Engine — Museum of Flight Seattle &amp; Blackbird Airpark</strong></td><td><code>2592 × 1936</code> &amp; <code>3264 × 2448</code></td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/3/37/J58Engine_MuseumOf_Flight_Seattle.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/3/37/J58Engine_MuseumOf_Flight_Seattle.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/a/a5/SR-71A_at_Joe_Davies_Heritage_Airpark_-_J58_Jet_Engine._-_panoramio.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/a/a5/SR-71A_at_Joe_Davies_Heritage_Airpark_-_J58_Jet_Engine._-_panoramio.jpg</a></td></tr>
+<tr><td><strong>J58 Ground Test Cell Running in Full Afterburner with Shock Diamonds (<code>NASA EC97-44007-01</code>)</strong></td><td><code>3441 × 3114</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/e/ed/J58_Turbojet_in_Full_Afterburner_%28EC97-44007-01%29.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/e/ed/J58_Turbojet_in_Full_Afterburner_%28EC97-44007-01%29.jpg</a></td></tr>
+<tr><td><strong>Buick Wildcat / Big-Block V8 Twin <code>AG330</code> Ground Start Cart</strong></td><td><code>2592 × 1944</code></td><td><a href="https://upload.wikimedia.org/wikipedia/commons/7/78/AG330_start_cart.JPG" target="_blank">https://upload.wikimedia.org/wikipedia/commons/7/78/AG330_start_cart.JPG</a></td></tr>
+</tbody></table>
+<hr/>
+<h3>3. Internal Reconnaissance Sensors, Optical Cameras &amp; Structural Titanium Hardware</h3>
+<table><thead><tr><th>Internal Subsystem</th><th>Resolution</th><th>Direct Image URL &amp; Description</th></tr></thead><tbody>
+<tr><td><strong>Hycon Technical Objective Camera (<code>TEOC</code> No. 36) — Chine Bay Optical Reconnaissance Camera (<code>3</code> angles)</strong></td><td><code>5472 × 3648</code> (×3)</td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/c/c8/Technical_Objective_Camera_%28TEOC%29%2C_No._36%2C_Hycon_Corporation_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01063.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/c/c8/Technical_Objective_Camera_%28TEOC%29%2C_No._36%2C_Hycon_Corporation_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01063.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/6/6e/Technical_Objective_Camera_%28TEOC%29_detail%2C_No._36%2C_Hycon_Corporation_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01065.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/6/6e/Technical_Objective_Camera_%28TEOC%29_detail%2C_No._36%2C_Hycon_Corporation_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01065.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/9/9e/Technical_Objective_Camera_%28TEOC%29_detail%2C_No._36%2C_Hycon_Corporation_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01067.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/9/9e/Technical_Objective_Camera_%28TEOC%29_detail%2C_No._36%2C_Hycon_Corporation_-_Lockheed_SR-71A_Blackbird%2C_1966_-_Evergreen_Aviation_%26_Space_Museum_-_McMinnville%2C_Oregon_-_DSC01067.jpg</a></td></tr>
+<tr><td><strong>Internal Titanium Rib, Riveted Stringer &amp; Honeycomb/Corrugated Structure (<code>61-7953</code> Exposed Structure Macro)</strong></td><td><code>7535 × 4088</code> &amp; <code>5599 × 4600</code></td><td>• <a href="https://upload.wikimedia.org/wikipedia/commons/1/1c/SR-71_61-7953_debris_1.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/1/1c/SR-71_61-7953_debris_1.jpg</a> <br/>• <a href="https://upload.wikimedia.org/wikipedia/commons/c/c6/SR-71_-61-7953_debris_2.jpg" target="_blank">https://upload.wikimedia.org/wikipedia/commons/c/c6/SR-71_-61-7953_debris_2.jpg</a></td></tr>
+</tbody></table>
+<hr/>
+<h3>4. Recommended Blender Collection Hierarchy &amp; Exploded-View Rig Architecture</h3>
+<p>Organize the Blender MCP scene into <strong>10 modular sub-collections</strong> parented to <code>SR71_Master_Root</code> driven by a custom property <code>Explode_Factor</code> (<code>0.0</code> → <code>1.0</code>):</p>
+<pre><code>
+SR71_Master_Root (Empty at World Origin 0,0,0; Metric 1.0 = 1m)
+├── 01_Nose_Recon_Module
+│   ├── Nose_Radome_Shell          [Explode: -3.5m along longitudinal axis]
+│   └── OBC_SLR_Nose_Payload       [Explode: -1.8m along longitudinal axis]
+├── 02_Cockpit_Crew_Module
+│   ├── Forward_Canopy_Clamshell   [Explode: +2.2m Z, -0.5m Y, +35° hinge]
+│   ├── Aft_RSO_Canopy_Clamshell   [Explode: +2.2m Z, +0.3m Y, +35° hinge]
+│   ├── Pilot_Weber_Ejection_Seat  [Explode: +3.8m Z (vertical extraction)]
+│   ├── RSO_Weber_Ejection_Seat    [Explode: +3.8m Z (vertical extraction)]
+│   └── Pilot_RSO_Tub_And_Panels   [Stays at 0.0m core datum for close-up inspection]
+├── 03_Avionics_And_Chine_Bays
+│   ├── Nortronics_ANS_StarTracker [Explode: +1.6m Z out of dorsal bay behind RSO]
+│   ├── Left_Chine_TEOC_Camera     [Explode: -2.0m X, -0.8m Z]
+│   ├── Right_Chine_TEOC_Camera    [Explode: +2.0m X, -0.8m Z]
+│   └── Forward_Chine_Upper_Skins  [Explode: ±2.5m X, +1.5m Z]
+├── 04_Fuselage_JP7_Fuel_System
+│   └── Tanks_01_Through_06A       [6 translucent amber/gold JP-7 heat-sink volumes + manifold]
+├── 05_Fuselage_Titanium_Skeleton
+│   ├── Ring_Bulkheads_FS295_FS1260 [Stays anchored on core datum with FS715 carry-through]
+│   ├── Dorsal_Spine_Skin_Panels   [Explode: +3.2m Z]
+│   └── Ventral_Belly_Skin_Panels  [Explode: -2.4m Z]
+├── 06_Inner_And_Outer_Wings
+│   ├── Wing_Titanium_Spar_Grid    [Stays anchored]
+│   ├── Upper_Corrugated_Wing_Skin [Explode: +2.0m Z, ±1.5m X]
+│   ├── Lower_Corrugated_Wing_Skin [Explode: -1.8m Z, ±1.5m X]
+│   └── Composite_Sawtooth_Edges   [Explode: ±2.8m X outward]
+├── 07_Left_Propulsion_Pod (Mirror for 08_Right_Propulsion_Pod at X = ±4.115m)
+│   ├── Translating_Inlet_Spike    [Explode: -4.5m forward along nacelle axis + actuator shaft]
+│   ├── Forward_Bypass_Cowl_Ring   [Explode: -2.2m forward]
+│   ├── Nacelle_Upper_Cowl_Half    [Explode: +2.6m Z, -2.2m X]
+│   ├── Nacelle_Lower_Cowl_Half    [Explode: -2.6m Z, -2.2m X]
+│   ├── PW_J58_Core_And_6_Bypass   [Stays visible in mid-air or slides +2.5m aft]
+│   └── Ejector_Nozzle_BlowIn_Ring [Explode: +4.2m aft]
+├── 09_Flight_Control_Surfaces
+│   ├── Twin_AllMoving_Rudders     [Explode: +2.8m Z along 15° inward cant axis]
+│   └── Inboard_Outboard_Elevons   [Explode: +2.0m aft]
+└── 10_Landing_Gear_Assemblies
+    ├── Nose_Gear_Twin_Wheel       [Explode: -2.2m Z downward]
+    └── Main_Gear_3Wheel_Bogies_LR [Explode: -2.2m Z downward, Silver Al-tires]
+</code></pre>
+    </section>
+  
+    <section id="06-callouts" class="pack-section">
+      <div class="sec-header">
+        <h2>06. Phase-2 Interactive Examination Callouts</h2>
+        <a class="raw-pill" href="./06-callout-snippets-and-lore.md" target="_blank">Raw Markdown (06-callout-snippets-and-lore.md)</a>
+      </div>
+      <h3>Ready-to-Use Inspection Cards for Interactive Model Examination (Claude / Astro / Blender Viewer)</h3>
+<div class="callout"><strong>Purpose:</strong> In Phase 2 of your pipeline, examining or clicking parts of the exploded 3D SR-71A model triggers contextual engineering callouts and background history. Every snippet below is grounded in verified NASA Dryden, USAF Museum, and <code>T.O. 1SR-71A-1</code> data and mapped directly to the Blender collection names in <a href="05-inner-workings-cutaways-exploded-rig.md" target="_blank">05-inner-workings-cutaways-exploded-rig.md</a>.</div>
+<hr/>
+<h3>Hotspot Callout Cards (<code>12</code> Core Subsystems)</h3>
+<h4>1. Airframe Titanium Skin &amp; Chordwise Corrugations (<code>06_Inner_And_Outer_Wings</code>)</h4>
+<ul>
+<li><strong>Headline:</strong> <code>85%</code> Beta-Titanium Airframe Built to Grow in Flight</li>
+<li><strong>Operating Temp:</strong> <code>450 °F – 600 °F</code> (<code>232 °C – 316 °C</code>) average skin; <code>950 °F+</code> (<code>510 °C+</code>) at leading edges &amp; exhaust</li>
+<li><strong>Snippet:</strong> At sustained <code>Mach 3.2</code> cruise, aerodynamic friction heats the airframe beyond the structural softening point of aluminum. Lockheed Skunk Works fabricated <code>85%</code> of the structure from titanium alloys (<code>Ti-13V-11Cr-3Al</code>). Because the aircraft expands several inches in flight, wing skins are stamped with chordwise corrugations acting as thermal expansion joints—causing fuel panels to seep JP-7 on the ground until supersonic heat seals the airframe tight.</li>
+</ul>
+<h4>2. Translating Axisymmetric Inlet Spike (<code>Translating_Inlet_Spike</code>)</h4>
+<ul>
+<li><strong>Headline:</strong> Computer-Controlled Shockwave Trap (<code>54%</code> of Total Thrust!)</li>
+<li><strong>Travel Distance:</strong> <code>26 inches</code> (<code>0.66 m</code>) axial translation (<code>Mach 1.6</code> → <code>Mach 3.2+</code>)</li>
+<li><strong>Snippet:</strong> Above <code>Mach 2.5</code>, the inlet nacelles generate <strong>more propulsive thrust than the rotating turbojet core itself</strong> (<code>~54%</code> inlet pressure recovery vs. <code>~17.6%</code> turbojet core and <code>~28.4%</code> afterburner/ejector). Starting at <code>Mach 1.6</code>, the conical spike retracts aft <code>1.625 inches</code> per <code>0.1 Mach</code> (up to <code>26 inches</code>), capturing the supersonic shockwave inside the throat and decelerating air from <code>Mach 3.2</code> to subsonic <code>Mach 0.4</code> inches ahead of the compressor face.</li>
+</ul>
+<h4>3. Pratt &amp; Whitney J58 (<code>JT11D-20</code>) Continuous Bleed-Bypass Turboramjet (<code>PW_J58_Core_And_6_Bypass</code>)</h4>
+<ul>
+<li><strong>Headline:</strong> Hybrid Turbojet-Assisted Ramjet (<code>32,500 lbf</code> Thrust Each)</li>
+<li><strong>Signature Feature:</strong> <code>6</code> External 4th-Stage Bleed-Bypass Ducts + <code>TEB</code> Chemical Ignition</li>
+<li><strong>Snippet:</strong> At <code>Mach 3+</code>, inlet compression heats incoming air to <code>800 °F</code> (<code>427 °C</code>) <em>before</em> entering the compressor. Pratt &amp; Whitney solved this by opening bleed valves behind the 4th compressor stage, routing <code>~20%</code> of compressed air through <strong>six large external pipes</strong> directly into the afterburner. Each engine carries a sealed tank of pyrophoric <strong>Triethylborane (TEB)</strong>—enough for <code>16</code> injections—which bursts into green flame on contact with air to ignite low-volatility JP-7 fuel.</li>
+</ul>
+<h4>4. JP-7 Fuel &amp; Thermal Heat-Sink Architecture (<code>04_Fuselage_JP7_Fuel_System</code>)</h4>
+<ul>
+<li><strong>Headline:</strong> Fuel as Coolant, Hydraulic Actuator Fluid &amp; CG Trim (<code>~80,000 lb</code> Capacity)</li>
+<li><strong>Flash Point:</strong> <code>140 °F</code> (<code>60 °C</code>) — Extinguishes an open match at room temperature</li>
+<li><strong>Snippet:</strong> Stored across <strong>six large fuselage tanks (<code>1</code> through <code>6A</code>)</strong> and inner-wing integral structures (with <strong>zero fuel in the outer wings</strong>), <code>JP-7</code> serves as the aircraft&#x27;s primary <strong>heat sink</strong>—cooling the cockpits, avionics, hydraulic oil, and engine oil before burning at <code>300 °F</code> in the engines, while automated longitudinal transfer shifts Center of Gravity aft at Mach 3 to cut trim drag.</li>
+</ul>
+<h4>5. Free-Floating Blow-In Door Ejector Nozzle (<code>Ejector_Nozzle_BlowIn_Ring</code>)</h4>
+<ul>
+<li><strong>Headline:</strong> Variable Aerodynamic Exhaust Nozzle (<code>28.4%</code> of Cruise Thrust)</li>
+<li><strong>Snippet:</strong> Surrounding the J58 afterburner exit is a ring of free-floating tertiary <strong>&quot;blow-in&quot; doors</strong> and segmented variable-area ejector flaps. At low speeds, ambient air is drawn inward through the open doors to cushion the exhaust stream; at <code>Mach 3.2</code> (<code>80,000+ ft</code>), the doors seal shut and the outer petals open wide so the supersonic plume expands across the full nacelle diameter.</li>
+</ul>
+<h4>6. Forward Cockpit — Pilot Station (<code>Pilot_RSO_Tub_And_Panels</code>)</h4>
+<ul>
+<li><strong>Headline:</strong> Mach 3.2 Flight Deck &amp; Quartz V-Windscreen (<code>640 °F</code> Exterior)</li>
+<li><strong>Snippet:</strong> Wearing a <code>David Clark S1030</code> full-pressure suit, the pilot monitors supersonic inlet stability via the <strong>Triple Display Indicator (<code>KEAS</code> / <code>Mach</code> / <code>Altitude</code>)</strong> and dual <strong>Inlet Spike / Forward Bypass</strong> gauges. An <strong>Inlet Unstart</strong>—when the shockwave pops out of a nacelle—triggers violent yaw in milliseconds, countered automatically by the Digital Automatic Flight and Inlet Control System (<code>DAFICS</code>).</li>
+</ul>
+<h4>7. Rear Cockpit — Reconnaissance Systems Officer (<code>RSO</code>) (<code>Pilot_RSO_Tub_And_Panels</code>)</h4>
+<ul>
+<li><strong>Headline:</strong> Sensor Command, Electronic Warfare &amp; Navigation Brain</li>
+<li><strong>Snippet:</strong> Operating behind two small side windows and an optical belly viewfinder, the RSO manages the mission route, <code>ANS</code> star-tracker, Defensive Electronic Countermeasures (<code>DEF</code>), Side-Looking Radar (<code>ASARS-1</code>), Optical Bar Camera (<code>OBC</code>), and <code>TEOC</code> chine cameras—capable of imaging <strong>100,000 square miles per hour</strong> from <code>85,000 feet</code>.</li>
+</ul>
+<h4>8. Nortronics <code>NAS-14V2</code> Astro-Inertial Navigation System (<code>Nortronics_ANS_StarTracker</code>)</h4>
+<ul>
+<li><strong>Headline:</strong> <code>&quot;R2-D2&quot;</code> Daylight Star-Tracker Behind the RSO</li>
+<li><strong>Snippet:</strong> Mounted aft of the RSO bulkhead beneath a circular optical quartz dorsal window, <code>&quot;R2-D2&quot;</code> tracks up to <code>61</code> stars <strong>in broad daylight</strong> using a blue-light telescope on a gyro-stabilized platform, maintaining navigation accuracy within <code>~300 ft</code> across intercontinental Mach 3 sorties without GPS or radio emissions.</li>
+</ul>
+<h4>9. Blended Forward Chines &amp; Radar-Absorbing Sawtooth Composites (<code>03_Avionics_And_Chine_Bays</code>)</h4>
+<ul>
+<li><strong>Headline:</strong> First Operational Low-Observable Shaping + Supersonic Vortex Lift</li>
+<li><strong>Snippet:</strong> Comprising <code>15%</code> of the airframe via triangular phenyl-silane radar-absorbing composite tiles, the sharp lateral <strong>&quot;cobra hood&quot; chines</strong> reduce radar return while generating powerful leading-edge vortices over the inner delta wing to balance supersonic lift and house interchangeable <code>TEOC</code> cameras.</li>
+</ul>
+<h4>10. Detachable Modular Nose Bay (<code>01_Nose_Recon_Module</code>)</h4>
+<ul>
+<li><strong>Headline:</strong> Swappable <code>OBC</code> Panoramic Camera or <code>ASARS-1</code> Synthetic Aperture Radar</li>
+<li><strong>Snippet:</strong> Forward of <code>FS 295</code>, the entire nose cone unbolts as a self-contained mission pod—configured either with the <strong>Itek Optical Bar Camera</strong> (<code>10,500 ft</code> of panoramic film scanning horizon-to-horizon) or <strong>all-weather Synthetic Aperture Radar</strong> looking <code>100+ miles</code> laterally into contested territory.</li>
+</ul>
+<h4>11. Twin <code>15°</code> Inward-Canted All-Moving Rudders (<code>Twin_AllMoving_Rudders</code>)</h4>
+<ul>
+<li><strong>Headline:</strong> Full-Fin Aerodynamic Rudders Pivoting Atop the Nacelles</li>
+<li><strong>Snippet:</strong> Each entire vertical fin above the nacelle stub pivots as an <strong>all-moving control surface</strong>, canted <code>15°</code> inward to lower radar cross-section and provide instantaneous yaw authority during asymmetric Mach 3 inlet unstarts.</li>
+</ul>
+<h4>12. Aluminum-Impregnated Silver Main Landing Gear (<code>Main_Gear_3Wheel_Bogies_LR</code>)</h4>
+<ul>
+<li><strong>Headline:</strong> <code>22-Ply</code> Metallic Silver Tires Pressurized with Nitrogen (<code>415 psi</code>)</li>
+<li><strong>Snippet:</strong> Three custom <strong>B.F. Goodrich aluminum-powder-impregnated tires</strong> per main bogie reflect conductive heat inside the <code>550 °F</code> wheel wells and support <code>140,000 lb</code> gross weights and <code>175+ knot</code> landings assisted by a <code>40-foot</code> dorsal drag chute.</li>
+</ul>
+    </section>
+  
   </main>
 </body>
 </html>
